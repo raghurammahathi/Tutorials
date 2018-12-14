@@ -1,0 +1,6 @@
+framework module Pods_FormUsingStackviewUITests {
+  umbrella header "Pods-FormUsingStackviewUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

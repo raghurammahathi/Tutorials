@@ -37,9 +37,9 @@ class ViewController: UIViewController {
         img.clipsToBounds = true
         // Do any additional setup after loading the view, typically from a nib.
         
-        setupView()
+        //setupView()
         // Register View Controller as Observer
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
         
     }
     
@@ -52,35 +52,69 @@ extension ViewController: UITextFieldDelegate{
         
         switch textField {
         case TFName:
-            TFAge.becomeFirstResponder()
-        case TFAge:
-            TFMobile.becomeFirstResponder()
-        case TFMobile:
-            TFEmail.becomeFirstResponder()
-        case TFEmail:
-            TFAddress.becomeFirstResponder()
-        case TFAddress:
-            TFCountry.becomeFirstResponder()
-        case TFCountry:
-            TFPassword.becomeFirstResponder()
-        case TFPassword:
-            // Validate Text Field
             let (valid, message) = validate(textField)
-            
             if valid {
+                TFAge.becomeFirstResponder()
             }
-            
-            // Update Password Validation Label
+            self.lblHideName.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.lblHideName.isHidden = valid
+            })
+        case TFAge:
+            let (valid, message) = validate(textField)
+            if valid {
+                TFMobile.becomeFirstResponder()
+            }
+            self.lblHideAge.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.lblHideAge.isHidden = valid
+            })
+        case TFMobile:
+            let (valid, message) = validate(textField)
+            if valid {
+                TFEmail.becomeFirstResponder()
+            }
+            self.lblHideMobile.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.lblHideMobile.isHidden = valid
+            })
+        case TFEmail:
+            let (valid, message) = validate(textField)
+            if valid {
+                TFAddress.becomeFirstResponder()
+            }
+            self.lblHideEmail.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.lblHideEmail.isHidden = valid
+            })
+        case TFAddress:
+            let (valid, message) = validate(textField)
+            if valid {
+                TFCountry.becomeFirstResponder()
+            }
+            self.lblHideAddress.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.lblHideAddress.isHidden = valid
+            })
+        case TFCountry:
+            let (valid, message) = validate(textField)
+            if valid {
+                TFPassword.becomeFirstResponder()
+            }
+            self.lblHideCountry.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.lblHideCountry.isHidden = valid
+            })
+        case TFPassword:
+            let (valid, message) = validate(textField)
+            if valid {
+                TFPassword.resignFirstResponder()
+            }
             self.lblHidePassword.text = message
-            
-            // Show/Hide Password Validation Label
             UIView.animate(withDuration: 0.25, animations: {
                 self.lblHidePassword.isHidden = valid
             })
-            TFPassword.resignFirstResponder()
         default: break
-            
-            
         }
         return true
     }
@@ -89,39 +123,37 @@ extension ViewController: UITextFieldDelegate{
         guard let text = textField.text else {
             return (false, nil)
         }
-        
         if textField == TFPassword {
             return (text.count >= 6, "Password is too short.")
         }
-        
         return (text.count > 0, "This field cannot be empty.")
     }
-    fileprivate func setupView() {
-        // Configure Password Validation Label
-        lblHidePassword.isHidden = true
-        
-        btnCreateAccount.isEnabled = false
-        
-    }
+//    fileprivate func setupView() {
+//        // Configure Password Validation Label
+//      //  lblHidePassword.isHidden = true
+//
+//        btnCreateAccount.isEnabled = false
+//
+//    }
     
     // MARK: - Notification Handling
     
-    @objc private func textDidChange(_ notification: Notification) {
-        var formIsValid = true
-        
-        for textField in textFields {
-            // Validate Text Field
-            let (valid, _) = validate(textField)
-            
-            guard valid else {
-                formIsValid = false
-                break
-            }
-        }
-        
-        // Update Save Button
-        btnCreateAccount.isEnabled = formIsValid
-    }
+//    @objc private func textDidChange(_ notification: Notification) {
+//        var formIsValid = true
+//
+//        for textField in textFields {
+//            // Validate Text Field
+//            let (valid, _) = validate(textField)
+//
+//            guard valid else {
+//                formIsValid = false
+//                break
+//            }
+//        }
+//
+//        // Update Save Button
+//        btnCreateAccount.isEnabled = formIsValid
+//    }
 }
 
 
