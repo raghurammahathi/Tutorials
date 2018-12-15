@@ -1,0 +1,6 @@
+framework module Pods_formVerticalStackviews {
+  umbrella header "Pods-formVerticalStackviews-umbrella.h"
+
+  export *
+  module * { export * }
+}
