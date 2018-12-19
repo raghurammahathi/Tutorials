@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B030A7A721CA3C1300C902CF /* FoodPandaScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B030A7A621CA3C1300C902CF /* FoodPandaScreenStoryboard.storyboard */; };
+		B030A7AB21CA4DFB00C902CF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030A7AA21CA4DFB00C902CF /* FilterViewController.swift */; };
 		B053F93A21C8B40800FECF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F93921C8B40800FECF03 /* AppDelegate.swift */; };
 		B053F93C21C8B40800FECF03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F93B21C8B40800FECF03 /* ViewController.swift */; };
 		B053F93F21C8B40800FECF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B053F93D21C8B40800FECF03 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B030A7A621CA3C1300C902CF /* FoodPandaScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodPandaScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		B030A7AA21CA4DFB00C902CF /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		B053F93621C8B40800FECF03 /* DesignDirectoryScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignDirectoryScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B053F93921C8B40800FECF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B053F93B21C8B40800FECF03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				B053F93921C8B40800FECF03 /* AppDelegate.swift */,
-				B053F93B21C8B40800FECF03 /* ViewController.swift */,
 				B053F93D21C8B40800FECF03 /* Main.storyboard */,
+				B053F93B21C8B40800FECF03 /* ViewController.swift */,
+				B030A7A621CA3C1300C902CF /* FoodPandaScreenStoryboard.storyboard */,
+				B030A7AA21CA4DFB00C902CF /* FilterViewController.swift */,
 				B053F94021C8B40A00FECF03 /* Assets.xcassets */,
 				B053F94221C8B40A00FECF03 /* LaunchScreen.storyboard */,
 				B053F94521C8B40A00FECF03 /* Info.plist */,
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B030A7A721CA3C1300C902CF /* FoodPandaScreenStoryboard.storyboard in Resources */,
 				B053F94421C8B40A00FECF03 /* LaunchScreen.storyboard in Resources */,
 				B053F94121C8B40A00FECF03 /* Assets.xcassets in Resources */,
 				B053F93F21C8B40800FECF03 /* Main.storyboard in Resources */,
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B030A7AB21CA4DFB00C902CF /* FilterViewController.swift in Sources */,
 				B053F93C21C8B40800FECF03 /* ViewController.swift in Sources */,
 				B053F93A21C8B40800FECF03 /* AppDelegate.swift in Sources */,
 			);
