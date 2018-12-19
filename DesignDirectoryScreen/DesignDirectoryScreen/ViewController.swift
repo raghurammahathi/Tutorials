@@ -39,16 +39,37 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contactTypes.count
+        switch section {
+        case 0:
+            return contactTypes.count
+        case 1:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell")as! ContactCell
         let row = indexPath.row
         cell.lblContactType.text = contactTypes[row]
         cell.lblContactNumbers.text = contactNumbers[row]
-        return cell
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell")as! AddressCell
+            cell.lblAddress.text = "Address :"
+            cell.lblAddressValue.text = "isrgjp'orgjmrp'gojmvojsdfviknsadgarfgrerfgerfgedfgredghijulghktydjthjtdyjtuyktuytyhuuhkguhuhkyuhkuhkyujkuyd"
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 class ContactCell: UITableViewCell {
@@ -57,5 +78,9 @@ class ContactCell: UITableViewCell {
  
 }
 
-    
+class AddressCell: UITableViewCell {
+   
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblAddressValue: UILabel!
+}
 
