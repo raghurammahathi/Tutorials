@@ -382,7 +382,7 @@
                                             <outlet property="topCuisinesCollection" destination="n0q-du-hDZ" id="YhH-sd-MRU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCuisinesCell" rowHeight="150" id="XGK-fJ-BM5" userLabel="TopCuisinesCell" customClass="AllCuisinesCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCuisinesCell" rowHeight="150" id="XGK-fJ-BM5" userLabel="AllCuisinesCell" customClass="AllCuisinesCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="528" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGK-fJ-BM5" id="aZt-9B-sYG">
