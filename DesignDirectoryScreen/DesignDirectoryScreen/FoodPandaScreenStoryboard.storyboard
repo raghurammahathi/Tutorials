@@ -62,7 +62,7 @@
             <objects>
                 <viewController id="py3-AJ-NoN" customClass="FilterViewController" customModule="DesignDirectoryScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vCi-Zj-uTG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAQ-Kp-bdr">
@@ -117,7 +117,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltU-65-cnZ">
-                                <rect key="frame" x="0.0" y="881" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="1381" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cO-81-yqd">
                                         <rect key="frame" x="8" y="14" width="359" height="40"/>
@@ -138,7 +138,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2VP-ff-R44">
-                                <rect key="frame" x="0.0" y="84" width="375" height="797"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="1297"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortyByCell" rowHeight="200" id="61j-uQ-FmI" customClass="SortyByCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
@@ -307,7 +307,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-du-hDZ" userLabel="Filter Collection View">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-du-hDZ" userLabel="Top cuisine Collection View">
                                                     <rect key="frame" x="0.0" y="50" width="375" height="100"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8su-S1-SXV">
@@ -382,63 +382,13 @@
                                             <outlet property="topCuisinesCollection" destination="n0q-du-hDZ" id="YhH-sd-MRU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCuisinesCell" rowHeight="150" id="XGK-fJ-BM5" userLabel="AllCuisinesCell" customClass="AllCuisinesCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="528" width="375" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCuisinesCell" rowHeight="771" id="XGK-fJ-BM5" userLabel="AllCuisinesCell" customClass="AllCuisinesCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="528" width="375" height="771"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGK-fJ-BM5" id="aZt-9B-sYG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="770.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FOH-ph-Sj2" userLabel="All Cuisines Collection View">
-                                                    <rect key="frame" x="0.0" y="50" width="375" height="100"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sEW-4R-rye">
-                                                        <size key="itemSize" width="130" height="100"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllCuisinesCollectionViewCell" id="NYr-DG-bn0" customClass="AllCuisinesCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="100"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="100"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-UK-mUo">
-                                                                        <rect key="frame" x="5.5" y="30" width="119" height="40"/>
-                                                                        <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntV-5E-jlA">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="40"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="40" id="43y-Iy-yAH"/>
-                                                                            <constraint firstItem="ntV-5E-jlA" firstAttribute="leading" secondItem="SKW-UK-mUo" secondAttribute="leading" id="BAX-ls-A58"/>
-                                                                            <constraint firstAttribute="width" constant="119" id="PTB-j0-gRY"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="ntV-5E-jlA" secondAttribute="bottom" id="hy3-7V-TMt"/>
-                                                                            <constraint firstItem="ntV-5E-jlA" firstAttribute="top" secondItem="SKW-UK-mUo" secondAttribute="top" id="wGQ-Rz-HJf"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="ntV-5E-jlA" secondAttribute="trailing" id="y1s-dH-ptB"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                </subviews>
-                                                            </view>
-                                                            <constraints>
-                                                                <constraint firstItem="SKW-UK-mUo" firstAttribute="centerX" secondItem="NYr-DG-bn0" secondAttribute="centerX" id="dd6-6I-01u"/>
-                                                                <constraint firstItem="SKW-UK-mUo" firstAttribute="centerY" secondItem="NYr-DG-bn0" secondAttribute="centerY" id="jH9-Pw-iyk"/>
-                                                            </constraints>
-                                                            <connections>
-                                                                <outlet property="lblDishes" destination="ntV-5E-jlA" id="RQM-DL-FoF"/>
-                                                                <outlet property="viewDishes" destination="SKW-UK-mUo" id="Rmi-dL-hvj"/>
-                                                            </connections>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Cuisines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ig-mg-WjI">
                                                     <rect key="frame" x="15" y="8" width="345" height="24"/>
                                                     <constraints>
@@ -448,19 +398,99 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKk-wx-bJ5" userLabel="All Cuisines table view">
+                                                    <rect key="frame" x="0.0" y="40" width="375" height="730.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <prototypes>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllCuisinesTableViewCell" rowHeight="100" id="9RB-dk-sEj" userLabel="all cuisines table view cell" customClass="AllCuisinesTableViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9RB-dk-sEj" id="Aef-84-L6A">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="28K-uA-ex5" userLabel="All cuisine Collection View">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fGm-3L-tOd">
+                                                                            <size key="itemSize" width="130" height="100"/>
+                                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                        </collectionViewFlowLayout>
+                                                                        <cells>
+                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllCuisinesCollectionViewCell" id="Lp6-oV-qI2" customClass="AllCuisinesCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="-0.5" width="130" height="100"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="100"/>
+                                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                                    <subviews>
+                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grS-7M-uXT">
+                                                                                            <rect key="frame" x="5.5" y="30" width="119" height="40"/>
+                                                                                            <subviews>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWh-kR-tKa">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="40"/>
+                                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                    <nil key="textColor"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                            </subviews>
+                                                                                            <color key="backgroundColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="bottom" secondItem="zWh-kR-tKa" secondAttribute="bottom" id="Dhz-NB-Apm"/>
+                                                                                                <constraint firstAttribute="trailing" secondItem="zWh-kR-tKa" secondAttribute="trailing" id="HQy-DL-q0z"/>
+                                                                                                <constraint firstAttribute="height" constant="40" id="San-Dx-O9l"/>
+                                                                                                <constraint firstItem="zWh-kR-tKa" firstAttribute="leading" secondItem="grS-7M-uXT" secondAttribute="leading" id="teA-wV-xfp"/>
+                                                                                                <constraint firstAttribute="width" constant="119" id="xiE-gW-FuH"/>
+                                                                                                <constraint firstItem="zWh-kR-tKa" firstAttribute="top" secondItem="grS-7M-uXT" secondAttribute="top" id="xuf-S9-UGe"/>
+                                                                                            </constraints>
+                                                                                        </view>
+                                                                                    </subviews>
+                                                                                </view>
+                                                                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="grS-7M-uXT" firstAttribute="centerX" secondItem="Lp6-oV-qI2" secondAttribute="centerX" id="jzR-gb-kOf"/>
+                                                                                    <constraint firstItem="grS-7M-uXT" firstAttribute="centerY" secondItem="Lp6-oV-qI2" secondAttribute="centerY" id="ryy-MF-uaI"/>
+                                                                                </constraints>
+                                                                                <connections>
+                                                                                    <outlet property="lblItems" destination="zWh-kR-tKa" id="PTU-y2-ujd"/>
+                                                                                    <outlet property="viewItems" destination="grS-7M-uXT" id="MOV-Jb-Mk5"/>
+                                                                                </connections>
+                                                                            </collectionViewCell>
+                                                                        </cells>
+                                                                    </collectionView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="28K-uA-ex5" secondAttribute="trailing" id="0Yd-KA-YBW"/>
+                                                                    <constraint firstItem="28K-uA-ex5" firstAttribute="top" secondItem="Aef-84-L6A" secondAttribute="top" id="6re-vh-cVa"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="28K-uA-ex5" secondAttribute="bottom" id="9AP-My-jHB"/>
+                                                                    <constraint firstItem="28K-uA-ex5" firstAttribute="leading" secondItem="Aef-84-L6A" secondAttribute="leading" id="B4i-6F-Djt"/>
+                                                                </constraints>
+                                                            </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="allCuisinesCollectionView" destination="28K-uA-ex5" id="Oh1-vU-qvp"/>
+                                                            </connections>
+                                                        </tableViewCell>
+                                                    </prototypes>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="py3-AJ-NoN" id="6Bw-oZ-Mg1"/>
+                                                        <outlet property="delegate" destination="py3-AJ-NoN" id="dYT-BW-thQ"/>
+                                                    </connections>
+                                                </tableView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="9Ig-mg-WjI" secondAttribute="trailing" constant="15" id="3q6-VN-fjL"/>
-                                                <constraint firstAttribute="bottom" secondItem="FOH-ph-Sj2" secondAttribute="bottom" constant="-0.5" id="7Mk-Rp-AyG"/>
-                                                <constraint firstAttribute="trailing" secondItem="FOH-ph-Sj2" secondAttribute="trailing" id="9SR-Z0-cZq"/>
-                                                <constraint firstItem="FOH-ph-Sj2" firstAttribute="top" secondItem="aZt-9B-sYG" secondAttribute="top" constant="50" id="M9a-pq-TSd"/>
+                                                <constraint firstItem="YKk-wx-bJ5" firstAttribute="leading" secondItem="aZt-9B-sYG" secondAttribute="leading" id="Ebf-rP-k5i"/>
+                                                <constraint firstAttribute="bottom" secondItem="YKk-wx-bJ5" secondAttribute="bottom" id="Rvo-zi-Wp5"/>
+                                                <constraint firstItem="YKk-wx-bJ5" firstAttribute="top" secondItem="9Ig-mg-WjI" secondAttribute="bottom" constant="8" id="UL6-b3-YtS"/>
+                                                <constraint firstAttribute="trailing" secondItem="YKk-wx-bJ5" secondAttribute="trailing" id="WmO-LC-A9j"/>
                                                 <constraint firstItem="9Ig-mg-WjI" firstAttribute="leading" secondItem="aZt-9B-sYG" secondAttribute="leading" constant="15" id="d86-Pl-fDZ"/>
-                                                <constraint firstItem="FOH-ph-Sj2" firstAttribute="leading" secondItem="aZt-9B-sYG" secondAttribute="leading" id="gPj-DE-tQh"/>
                                                 <constraint firstItem="9Ig-mg-WjI" firstAttribute="top" secondItem="aZt-9B-sYG" secondAttribute="top" constant="8" id="qiN-BX-SpO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="allCuisinesCollection" destination="FOH-ph-Sj2" id="Z2q-ef-x1s"/>
+                                            <outlet property="allCuisinesTableView" destination="YKk-wx-bJ5" id="1xW-bk-an6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -485,7 +515,7 @@
                         <viewLayoutGuide key="safeArea" id="zv0-tq-S10"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="el7-d0-ExL"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="btnShowRest" destination="2cO-81-yqd" id="6so-mP-9Or"/>
                         <outlet property="tableFilter" destination="2VP-ff-R44" id="rHV-tC-YTM"/>
