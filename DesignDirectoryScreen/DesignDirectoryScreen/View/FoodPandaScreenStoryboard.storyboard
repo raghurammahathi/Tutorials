@@ -29,11 +29,22 @@
         <scene sceneID="ziM-ZO-8pa">
             <objects>
                 <viewController id="uX5-hZ-pFS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XWL-xN-8ZZ">
+                    <view key="view" contentMode="scaleToFill" id="XWL-xN-8ZZ" customClass="DotPattern" customModule="DesignDirectoryScreen" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qh6-u5-SJJ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                <color key="value" red="0.86016689681428993" green="0.92145264149999995" blue="0.83523255692492537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                <color key="value" red="0.41539117905632794" green="0.77322068739453897" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="patternSize">
+                                <real key="value" value="80"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="BjM-UO-jM2"/>
                 </viewController>
@@ -45,26 +56,22 @@
         <scene sceneID="5jt-zt-uNd">
             <objects>
                 <viewController id="S0F-7o-ZgD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rkP-Kk-7f1">
+                    <view key="view" contentMode="scaleToFill" id="rkP-Kk-7f1" customClass="BackgroundView" customModule="DesignDirectoryScreen" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-7y-SGM" customClass="DesignableButton" customModule="DesignDirectoryScreen" customModuleProvider="target">
-                                <rect key="frame" x="8" y="558" width="359" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Boi-Fi-rIu"/>
-                                    <constraint firstAttribute="width" constant="359" id="L6h-kH-i8X"/>
-                                </constraints>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="0.6705882353" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="EWk-bI-JXo" firstAttribute="bottom" secondItem="W2D-7y-SGM" secondAttribute="bottom" constant="20" id="GjC-Zq-TGL"/>
-                            <constraint firstItem="W2D-7y-SGM" firstAttribute="top" secondItem="EWk-bI-JXo" secondAttribute="top" constant="538" id="WS0-Km-Jfk"/>
-                            <constraint firstItem="EWk-bI-JXo" firstAttribute="trailing" secondItem="W2D-7y-SGM" secondAttribute="trailing" constant="8" id="icN-I5-tRb"/>
-                            <constraint firstItem="W2D-7y-SGM" firstAttribute="leading" secondItem="EWk-bI-JXo" secondAttribute="leading" constant="8" id="kMM-AI-MF8"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EWk-bI-JXo"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                <color key="value" red="1" green="1" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                <color key="value" red="0.87450980392156863" green="1" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="patternSize">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="XWM-qJ-BFG"/>
                 </viewController>
