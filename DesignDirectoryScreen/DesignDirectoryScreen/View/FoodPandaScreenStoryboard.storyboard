@@ -48,7 +48,22 @@
                     <view key="view" contentMode="scaleToFill" id="rkP-Kk-7f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-7y-SGM" customClass="DesignableButton" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                <rect key="frame" x="8" y="558" width="359" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Boi-Fi-rIu"/>
+                                    <constraint firstAttribute="width" constant="359" id="L6h-kH-i8X"/>
+                                </constraints>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.6705882353" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EWk-bI-JXo" firstAttribute="bottom" secondItem="W2D-7y-SGM" secondAttribute="bottom" constant="20" id="GjC-Zq-TGL"/>
+                            <constraint firstItem="W2D-7y-SGM" firstAttribute="top" secondItem="EWk-bI-JXo" secondAttribute="top" constant="538" id="WS0-Km-Jfk"/>
+                            <constraint firstItem="EWk-bI-JXo" firstAttribute="trailing" secondItem="W2D-7y-SGM" secondAttribute="trailing" constant="8" id="icN-I5-tRb"/>
+                            <constraint firstItem="W2D-7y-SGM" firstAttribute="leading" secondItem="EWk-bI-JXo" secondAttribute="leading" constant="8" id="kMM-AI-MF8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EWk-bI-JXo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="XWM-qJ-BFG"/>
@@ -119,13 +134,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltU-65-cnZ">
                                 <rect key="frame" x="0.0" y="1381" width="375" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cO-81-yqd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cO-81-yqd" customClass="DesignableButton" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                         <rect key="frame" x="8" y="14" width="359" height="40"/>
-                                        <color key="backgroundColor" red="0.061653263866901398" green="0.80682563781738281" blue="0.51845604181289673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                                         <state key="normal" title="Show restaurants">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.061653263870000002" green="0.80682563780000005" blue="0.51845604180000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
