@@ -15,7 +15,6 @@ class FilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // tableFilter.estimatedRowHeight = 200
 
         btnShowRest.layer.cornerRadius = 5
         btnShowRest.clipsToBounds = true
@@ -35,16 +34,16 @@ extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section{
         case 0:
-            return 200
+            return 100
         case 1:
             if indexPath.row == 0{
-                return 100
+                return 81
             }
             if indexPath.row == 1{
-                return 200
+                return 130
             }
             if indexPath.row == 2{
-                return 771
+                return 1132
             }
         default:
             return 0
@@ -135,7 +134,7 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = (collectionView.bounds.width / 5) - 2 * 5
-        return CGSize(width: itemWidth, height: 150)
+        return CGSize(width: itemWidth, height: collectionView.frame.height)
 
 
     }
@@ -177,7 +176,7 @@ class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = (collectionView.bounds.width / 3) - 2 * 5
-        return CGSize(width: itemWidth, height: 100)
+        return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
@@ -212,7 +211,7 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         super.awakeFromNib()
         self.topCuisinesCollection.delegate = self
         self.topCuisinesCollection.dataSource = self
-       cuisineNames = ["Snacks","Sandwitches","Pizza","Chineese","Burger"]
+       cuisineNames = ["Snacks","Sandwitches","Pizza","Ice creams","Coffee"]
        // imageArray = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -248,10 +247,10 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
+        return 1
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
+        return 1
     }
     
 }
@@ -278,7 +277,7 @@ class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 42
     }
 
 }
@@ -293,7 +292,7 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
         super.awakeFromNib()
         self.allCuisinesCollectionView.delegate = self
         self.allCuisinesCollectionView.dataSource = self
-        cuisineNames = ["Snacks","Sandwitches","Pizza","Chineese","Burger"]
+        cuisineNames = ["Snacks","Sandwitches","Pizza"]
         // imageArray = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -316,17 +315,20 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
         }
         return UICollectionViewCell()
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let itemsPerRow:CGFloat = 3
-        let hardCodedPadding:CGFloat = 5
-        let itemWidth = (collectionView.bounds.width / itemsPerRow) - 2 * itemsPerRow
-        let itemHeight = (collectionView.bounds.height / 2) - hardCodedPadding
-        
-        return CGSize(width: itemWidth, height: itemHeight)
-        
+        let itemWidth = (collectionView.bounds.width / 3) - 2 * 5
+        return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        let itemsPerRow:CGFloat = 3
+//        let hardCodedPadding:CGFloat = 5
+//        let itemWidth = (collectionView.bounds.width / itemsPerRow) - 2 * itemsPerRow
+//        let itemHeight = (collectionView.bounds.height / 2) - hardCodedPadding
+//
+//        return CGSize(width: itemWidth, height: itemHeight)
+//
+//    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
