@@ -8,6 +8,12 @@
 
 import UIKit
 
+var sortImages = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
+var sortNames = ["Relevance","Rating","Delivery Time","Delivery Free","Minimum Order"]
+var budgetNames = ["one","two","three"]
+var topCuisineNames = ["Snacks","Sandwitches","Pizza","Ice creams","Coffee"]
+var allCuisineNames = ["Snacks","Sandwitches","Pizza"]
+
 class FilterViewController: UIViewController {
 
     @IBOutlet weak var tableFilter: UITableView!
@@ -15,15 +21,8 @@ class FilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        btnShowRest.layer.cornerRadius = 5
-//        btnShowRest.clipsToBounds = true
-        // Do any additional setup after loading the view.
     }
-    
 }
-
-
 
 extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
     
@@ -34,19 +33,36 @@ extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section{
         case 0:
-            return 100
+            if sortImages.count == 0{
+            return 0
+            }else{
+                return 100
+            }
         case 1:
-            if indexPath.row == 0{
+        if indexPath.row == 0{
+            if budgetNames.count == 0{
+                return 0
+            }else{
                 return 81
             }
-            if indexPath.row == 1{
-                // use array named like topCusines
-                return 130 // All cusines height depends on number of objects, u cant pass a static value
+        }
+
+        if indexPath.row == 1{
+            if topCuisineNames.count == 0{
+                return 0
+            }else{
+                return 130
             }
-            if indexPath.row == 2{
-                // use an array named like allCusines
-                return 1132 // same as row 1 u cant pass static value, this depends on number of objects in array
+        }
+
+        if indexPath.row == 2{
+            if allCuisineNames.count == 0{
+                return 0
+            }else{
+                return 1132
             }
+        }
+
         default:
             return 0
         }
@@ -67,21 +83,20 @@ extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SortyByCell", for: indexPath) as! SortyByCell
-            // please use proper cell names
-            return cell
+            let sortByCell = tableView.dequeueReusableCell(withIdentifier: "SortyByCell", for: indexPath) as! SortyByCell
+            return sortByCell
         case 1:
             if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FilterByCell") as! FilterByCell
-            return cell
+            let budgetCell = tableView.dequeueReusableCell(withIdentifier: "BudgetCell") as! BudgetCell
+            return budgetCell
             }
             if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TopCuisinesCell") as! TopCuisinesCell
-            return cell
+            let topCuisinesCell = tableView.dequeueReusableCell(withIdentifier: "TopCuisinesCell") as! TopCuisinesCell
+            return topCuisinesCell
             }
             if indexPath.row == 2 {
-             let cell = tableView.dequeueReusableCell(withIdentifier: "AllCuisinesCell") as! AllCuisinesCell
-                return cell
+             let allCuisinesCell = tableView.dequeueReusableCell(withIdentifier: "AllCuisinesCell") as! AllCuisinesCell
+                return allCuisinesCell
             }
         default:
         return UITableViewCell()
@@ -105,35 +120,26 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     
     @IBOutlet weak var sortCollectionView: UICollectionView!
     
-    //
-    var imageArray = [String] ()
-    var itemNames = [String] ()
-    //
     override func awakeFromNib() {
         super.awakeFromNib()
         self.sortCollectionView.delegate = self
         self.sortCollectionView.dataSource = self
-        imageArray = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
-        itemNames = ["Relevance","Rating","Delivery Time","Delivery Free","Minimum Order"]
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count
+        return sortImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // please use proper cell names
-        //CLASS NAME SHOULD STARTS WITH CAPITAL LATTER, this is wrong way to give a name to class 'sortCollectionViewCell'
-        
-        if let cell: sortCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sortCollectionViewCell", for: indexPath) as? sortCollectionViewCell
+        if let sortCollectionCell: SortCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SortCollectionCell", for: indexPath) as? SortCollectionCell
         {
             
-            cell.imgSortItems.image = UIImage(named: imageArray[indexPath.row])
-            cell.lblSortItems.text = itemNames[indexPath.row]
-            return cell
+            sortCollectionCell.imgSortItems.image = UIImage(named: sortImages[indexPath.row])
+            sortCollectionCell.lblSortItems.text = sortNames[indexPath.row]
+            return sortCollectionCell
         }
         return UICollectionViewCell()
     }
@@ -144,36 +150,34 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
-class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class BudgetCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var filterCollectionView: UICollectionView!
-    var cuisineNames = [String] ()
+    @IBOutlet weak var budgetCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.filterCollectionView.delegate = self
-        self.filterCollectionView.dataSource = self
-        cuisineNames = ["one","two","three"]
+        self.budgetCollectionView.delegate = self
+        self.budgetCollectionView.dataSource = self
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cuisineNames.count
+        return budgetNames.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // please laways give proper naming to variables you can use 'FilterCollectionViewCell' instead of 'cell'
+
         
-        if let cell: FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCollectionViewCell", for: indexPath) as? FilterCollectionViewCell
+        if let budgetCollectionCell: BudgetCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BudgetCollectionCell", for: indexPath) as? BudgetCollectionCell
         {
-            cell.viewBudget.layer.cornerRadius = 10
-            cell.viewBudget.clipsToBounds = true
-            cell.viewBudget.layer.borderWidth = 1
-            cell.viewBudget.layer.borderColor = UIColor.black.cgColor
-            cell.lblBudget.text = cuisineNames[indexPath.row]
-            return cell
+            budgetCollectionCell.viewBudget.layer.cornerRadius = 10
+            budgetCollectionCell.viewBudget.clipsToBounds = true
+            budgetCollectionCell.viewBudget.layer.borderWidth = 1
+            budgetCollectionCell.viewBudget.layer.borderColor = UIColor.black.cgColor
+            budgetCollectionCell.lblBudget.text = budgetNames[indexPath.row]
+            return budgetCollectionCell
         }
         return UICollectionViewCell()
     }
@@ -191,38 +195,34 @@ class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     
 }
 
-// I cant see flow layout is working as in flow layout u dont need to return the size, size of cell depends on content of cells
 class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
 
     @IBOutlet weak var topCuisinesCollection: UICollectionView!
-    var cuisineNames = [String] ()
     override func awakeFromNib() {
         super.awakeFromNib()
         self.topCuisinesCollection.delegate = self
         self.topCuisinesCollection.dataSource = self
-       cuisineNames = ["Snacks","Sandwitches","Pizza","Ice creams","Coffee"]
 
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cuisineNames.count
+        return topCuisineNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // again 'cell' is not a right name to use always
-        if let cell: TopCuisinesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopCuisinesCollectionViewCell", for: indexPath) as? TopCuisinesCollectionViewCell
+        if let topCuisinesCollectionCell: TopCuisinesCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopCuisinesCollectionCell", for: indexPath) as? TopCuisinesCollectionCell
         {
             // later u need to replace this with coregraphics, i will let u know how to do this later
-            cell.viewItems.layer.cornerRadius = 10
-            cell.viewItems.clipsToBounds = true
-            cell.viewItems.layer.borderWidth = 1
-            cell.viewItems.layer.borderColor = UIColor.black.cgColor
-            cell.lblItems.text = cuisineNames[indexPath.row]
-            return cell
+            topCuisinesCollectionCell.viewItems.layer.cornerRadius = 10
+            topCuisinesCollectionCell.viewItems.clipsToBounds = true
+            topCuisinesCollectionCell.viewItems.layer.borderWidth = 1
+            topCuisinesCollectionCell.viewItems.layer.borderColor = UIColor.black.cgColor
+            topCuisinesCollectionCell.lblItems.text = topCuisineNames[indexPath.row]
+            return topCuisinesCollectionCell
         }
         return UICollectionViewCell()
     }
@@ -248,23 +248,25 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
 class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var allCuisinesTableView: UITableView!
+    var allCuisinesArray: [Int8] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         allCuisinesTableView.delegate = self
         allCuisinesTableView.dataSource = self
+        allCuisinesArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 26 // dont use static value, use the array y r going to create in controller class
-    }
+        return allCuisinesArray.count     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // again cell is not name to give
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllCuisinesTableViewCell", for: indexPath) as! AllCuisinesTableViewCell
-        return cell
+        let allCuisinesTableCell = tableView.dequeueReusableCell(withIdentifier: "AllCuisinesTableCell", for: indexPath) as! AllCuisinesTableCell
+        
+        return allCuisinesTableCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 42
@@ -273,33 +275,31 @@ class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSour
 }
 
 
-class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class AllCuisinesTableCell:UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 
     @IBOutlet weak var allCuisinesCollectionView: UICollectionView!
-    var cuisineNames = [String] ()
     override func awakeFromNib() {
         super.awakeFromNib()
         self.allCuisinesCollectionView.delegate = self
         self.allCuisinesCollectionView.dataSource = self
-        cuisineNames = ["Snacks","Sandwitches","Pizza"]
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cuisineNames.count
+        return allCuisineNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell: AllCuisinesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllCuisinesCollectionViewCell", for: indexPath) as? AllCuisinesCollectionViewCell
+        if let allCuisinesCollectionCell: AllCuisinesCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllCuisinesCollectionCell", for: indexPath) as? AllCuisinesCollectionCell
         {
-            cell.viewItems.layer.cornerRadius = 10
-            cell.viewItems.clipsToBounds = true
-            cell.viewItems.layer.borderWidth = 1
-            cell.viewItems.layer.borderColor = UIColor.black.cgColor
-            cell.lblItems.text = cuisineNames[indexPath.row]
-            return cell
+            allCuisinesCollectionCell.viewItems.layer.cornerRadius = 10
+            allCuisinesCollectionCell.viewItems.clipsToBounds = true
+            allCuisinesCollectionCell.viewItems.layer.borderWidth = 1
+            allCuisinesCollectionCell.viewItems.layer.borderColor = UIColor.black.cgColor
+            allCuisinesCollectionCell.lblItems.text = allCuisineNames[indexPath.row]
+            return allCuisinesCollectionCell
         }
         return UICollectionViewCell()
     }
@@ -315,14 +315,7 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
     }
 
 }
-
-
-
-
-
-
-// class name shoud start with capital later
-class sortCollectionViewCell: UICollectionViewCell {
+class SortCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var imgSortItems: UIImageView!
     @IBOutlet weak var lblSortItems: UILabel!
@@ -332,10 +325,9 @@ class sortCollectionViewCell: UICollectionViewCell {
     }
 }
 
-
-
 // below all cells are same y we need to create same again and again, we use single generalized cell
-class FilterCollectionViewCell: UICollectionViewCell {
+// i tried but couldn't do. please do it for me when u r free
+class BudgetCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var viewBudget: UIView!
     @IBOutlet weak var lblBudget: UILabel!
@@ -344,20 +336,22 @@ class FilterCollectionViewCell: UICollectionViewCell {
     }
 }
 
-class TopCuisinesCollectionViewCell: UICollectionViewCell {
+class TopCuisinesCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var viewItems: UIView!
     @IBOutlet weak var lblItems: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
 }
 
-class AllCuisinesCollectionViewCell: UICollectionViewCell {
+class AllCuisinesCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var viewItems: UIView!
     @IBOutlet weak var lblItems: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
 }

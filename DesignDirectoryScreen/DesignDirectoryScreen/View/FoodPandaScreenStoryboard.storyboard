@@ -189,7 +189,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sortCollectionViewCell" id="pY5-96-YA2" customClass="sortCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SortCollectionCell" id="pY5-96-YA2" customClass="SortCollectionCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.5" width="150" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -239,7 +239,7 @@
                                             <outlet property="sortCollectionView" destination="9UK-iz-T5H" id="m8G-Ma-Led"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterByCell" rowHeight="81" id="Xxs-Z8-86K" userLabel="FilterByCell" customClass="FilterByCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BudgetCell" rowHeight="81" id="Xxs-Z8-86K" userLabel="BudgetCell" customClass="BudgetCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xxs-Z8-86K" id="5QO-6h-JDV">
@@ -256,7 +256,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCollectionViewCell" id="5pZ-5l-vYv" customClass="FilterCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BudgetCollectionCell" id="5pZ-5l-vYv" customClass="BudgetCollectionCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="1" width="130" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -323,7 +323,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="filterCollectionView" destination="bcu-PJ-GbK" id="Vyk-Zz-1Ad"/>
+                                            <outlet property="budgetCollectionView" destination="bcu-PJ-GbK" id="Vyk-Zz-1Ad"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopCuisinesCell" rowHeight="130" id="435-Hw-SDh" userLabel="TopCuisinesCell" customClass="TopCuisinesCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
@@ -343,7 +343,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopCuisinesCollectionViewCell" id="xpp-zu-dUv" customClass="TopCuisinesCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopCuisinesCollectionCell" id="xpp-zu-dUv" customClass="TopCuisinesCollectionCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -427,7 +427,7 @@
                                                     <rect key="frame" x="0.0" y="40" width="375" height="1040"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllCuisinesTableViewCell" rowHeight="40" id="9RB-dk-sEj" userLabel="all cuisines table view cell" customClass="AllCuisinesTableViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllCuisinesTableCell" rowHeight="40" id="9RB-dk-sEj" userLabel="all cuisines table view cell" customClass="AllCuisinesTableCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9RB-dk-sEj" id="Aef-84-L6A">
@@ -444,7 +444,7 @@
                                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                         </collectionViewFlowLayout>
                                                                         <cells>
-                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllCuisinesCollectionViewCell" id="Lp6-oV-qI2" customClass="AllCuisinesCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllCuisinesCollectionCell" id="Lp6-oV-qI2" customClass="AllCuisinesCollectionCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="-1" width="130" height="41"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
