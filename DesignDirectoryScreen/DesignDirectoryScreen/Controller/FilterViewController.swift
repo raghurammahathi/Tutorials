@@ -40,10 +40,12 @@ extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
                 return 81
             }
             if indexPath.row == 1{
-                return 130
+                // use array named like topCusines
+                return 130 // All cusines height depends on number of objects, u cant pass a static value
             }
             if indexPath.row == 2{
-                return 1132
+                // use an array named like allCusines
+                return 1132 // same as row 1 u cant pass static value, this depends on number of objects in array
             }
         default:
             return 0
@@ -66,6 +68,7 @@ extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SortyByCell", for: indexPath) as! SortyByCell
+            // please use proper cell names
             return cell
         case 1:
             if indexPath.row == 0 {
@@ -102,8 +105,10 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     
     @IBOutlet weak var sortCollectionView: UICollectionView!
     
+    //
     var imageArray = [String] ()
     var itemNames = [String] ()
+    //
     override func awakeFromNib() {
         super.awakeFromNib()
         self.sortCollectionView.delegate = self
@@ -116,10 +121,13 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
-
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // please use proper cell names
+        //CLASS NAME SHOULD STARTS WITH CAPITAL LATTER, this is wrong way to give a name to class 'sortCollectionViewCell'
+        
         if let cell: sortCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sortCollectionViewCell", for: indexPath) as? sortCollectionViewCell
         {
             
@@ -155,6 +163,9 @@ class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // please laways give proper naming to variables you can use 'FilterCollectionViewCell' instead of 'cell'
+        
         if let cell: FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCollectionViewCell", for: indexPath) as? FilterCollectionViewCell
         {
             cell.viewBudget.layer.cornerRadius = 10
@@ -179,6 +190,8 @@ class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     }
     
 }
+
+// I cant see flow layout is working as in flow layout u dont need to return the size, size of cell depends on content of cells
 class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
 
@@ -199,8 +212,11 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // again 'cell' is not a right name to use always
         if let cell: TopCuisinesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopCuisinesCollectionViewCell", for: indexPath) as? TopCuisinesCollectionViewCell
         {
+            // later u need to replace this with coregraphics, i will let u know how to do this later
             cell.viewItems.layer.cornerRadius = 10
             cell.viewItems.clipsToBounds = true
             cell.viewItems.layer.borderWidth = 1
@@ -242,10 +258,11 @@ class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 26
+        return 26 // dont use static value, use the array y r going to create in controller class
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // again cell is not name to give
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllCuisinesTableViewCell", for: indexPath) as! AllCuisinesTableViewCell
         return cell
     }
@@ -299,6 +316,12 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
 
 }
 
+
+
+
+
+
+// class name shoud start with capital later
 class sortCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imgSortItems: UIImageView!
@@ -309,6 +332,9 @@ class sortCollectionViewCell: UICollectionViewCell {
     }
 }
 
+
+
+// below all cells are same y we need to create same again and again, we use single generalized cell
 class FilterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var viewBudget: UIView!
