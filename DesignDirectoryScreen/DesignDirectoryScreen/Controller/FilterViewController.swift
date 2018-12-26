@@ -12,8 +12,8 @@ var sortImages = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.
 var sortNames = ["Relevance","Rating","Delivery Time","Delivery Free","Minimum Order"]
 var budgetNames = ["one","two","three"]
 var topCuisineNames = ["Snacks","Sandwitches","Pizza","Ice creams","Coffee"]
-var allCuisineNames = ["Snacks","Sandwitches","Pizza"]
-
+var allCuisineNames = ["Snacks","Shakes","Pizza"]
+var rowAlphabets = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 class FilterViewController: UIViewController {
 
     @IBOutlet weak var tableFilter: UITableView!
@@ -145,7 +145,7 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (collectionView.bounds.width / 5) - 2 * 5
+        let itemWidth = (UIScreen.main.bounds.width / 5) - 2 * 5
         return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
 }
@@ -183,7 +183,7 @@ class BudgetCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (collectionView.bounds.width / 3) - 2 * 5
+        let itemWidth = (UIScreen.main.bounds.width / 3) - 2 * 5
         return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -231,9 +231,10 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
 
         let coloumns:CGFloat = 3
         let padding:CGFloat = 5
-        let itemWidth = (collectionView.bounds.width / coloumns) - 2 * coloumns
+       // let itemWidth = (collectionView.bounds.width / coloumns) - 2 * coloumns
         let itemHeight = (collectionView.bounds.height / 2) - padding
-        
+        let itemWidth = (UIScreen.main.bounds.width / coloumns) - 2 * coloumns
+
         return CGSize(width: itemWidth, height: itemHeight)
         
     }
@@ -261,11 +262,12 @@ class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allCuisinesArray.count     }
+        return allCuisinesArray.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let allCuisinesTableCell = tableView.dequeueReusableCell(withIdentifier: "AllCuisinesTableCell", for: indexPath) as! AllCuisinesTableCell
-        
+        allCuisinesTableCell.lblRow.text = rowAlphabets[indexPath.row]
         return allCuisinesTableCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -278,6 +280,7 @@ class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSour
 class AllCuisinesTableCell:UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 
+    @IBOutlet weak var lblRow: UILabel!
     @IBOutlet weak var allCuisinesCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -304,7 +307,8 @@ class AllCuisinesTableCell:UITableViewCell, UICollectionViewDelegate, UICollecti
         return UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (collectionView.bounds.width / 3) - 2 * 5
+        let itemWidth = (UIScreen.main.bounds.width / 3) - 2 * 5
+       // let itemWidth = (collectionView.bounds.width / 3) - 2 * 5
         return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
