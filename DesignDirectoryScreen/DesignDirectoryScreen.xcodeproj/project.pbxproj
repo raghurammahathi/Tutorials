@@ -45,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B03F63D621D34C820057CBA5 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7D38521D0DEDF00C21A78 /* DesignableButton.swift */,
+				B0A7D38921D1061900C21A78 /* BackgroundView.swift */,
+				B0A7D38B21D10B6100C21A78 /* DotPattern.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		B053F92D21C8B40800FECF03 = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +74,9 @@
 		B053F93821C8B40800FECF03 /* DesignDirectoryScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B0A7D38821D0E43600C21A78 /* Controller */,
 				B0A7D38721D0E41B00C21A78 /* View */,
+				B0A7D38821D0E43600C21A78 /* Controller */,
+				B03F63D621D34C820057CBA5 /* Custom Views */,
 				B053F93921C8B40800FECF03 /* AppDelegate.swift */,
 				B053F94021C8B40A00FECF03 /* Assets.xcassets */,
 				B053F94221C8B40A00FECF03 /* LaunchScreen.storyboard */,
@@ -79,9 +90,6 @@
 			children = (
 				B053F93D21C8B40800FECF03 /* Main.storyboard */,
 				B030A7A621CA3C1300C902CF /* FoodPandaScreenStoryboard.storyboard */,
-				B0A7D38521D0DEDF00C21A78 /* DesignableButton.swift */,
-				B0A7D38921D1061900C21A78 /* BackgroundView.swift */,
-				B0A7D38B21D10B6100C21A78 /* DotPattern.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

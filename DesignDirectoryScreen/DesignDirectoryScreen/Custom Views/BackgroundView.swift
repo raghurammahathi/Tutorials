@@ -1,5 +1,5 @@
 //
-//  DotPattern.swift
+//  BackgroundView.swift
 //  DesignDirectoryScreen
 //
 //  Created by SunarcMac on 24/12/18.
@@ -9,9 +9,8 @@
 import UIKit
 
 @IBDesignable
-class DotPattern: UIView {
+class BackgroundView: UIView {
     
-    //1
     @IBInspectable var lightColor: UIColor = UIColor.orange
     @IBInspectable var darkColor: UIColor = UIColor.yellow
     @IBInspectable var patternSize: CGFloat = 200
@@ -22,20 +21,26 @@ class DotPattern: UIView {
         context.fill(rect)
         
         let drawSize = CGSize(width: patternSize, height: patternSize)
-        
         UIGraphicsBeginImageContextWithOptions(drawSize, true, 0.0)
         let drawingContext = UIGraphicsGetCurrentContext()!
         darkColor.setFill()
         drawingContext.fill(CGRect(x: 0, y: 0, width: drawSize.width, height: drawSize.height))
         
+        let trianglePath = UIBezierPath()
+        trianglePath.move(to: CGPoint(x: drawSize.width/2, y: 0))
+        trianglePath.addLine(to: CGPoint(x: 0, y: drawSize.height/2))
+        trianglePath.addLine(to: CGPoint(x: drawSize.width, y: drawSize.height/2))
+        trianglePath.move(to: CGPoint(x: 0,y: drawSize.height/2))
+        trianglePath.addLine(to: CGPoint(x: drawSize.width/2, y: drawSize.height))
+        trianglePath.addLine(to: CGPoint(x: 0, y: drawSize.height))
+        trianglePath.move(to: CGPoint(x: drawSize.width, y: drawSize.height/2))
+        trianglePath.addLine(to: CGPoint(x: drawSize.width/2, y: drawSize.height))
+        trianglePath.addLine(to: CGPoint(x: drawSize.width, y: drawSize.height))
         
-        let circularPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: drawSize.width, height: drawSize.height), cornerRadius: 10)
-        
-       
         
         lightColor.setFill()
-        circularPath.fill()
-        
+        trianglePath.fill()
+
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

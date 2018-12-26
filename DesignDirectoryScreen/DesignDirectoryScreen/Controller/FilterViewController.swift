@@ -16,8 +16,8 @@ class FilterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        btnShowRest.layer.cornerRadius = 5
-        btnShowRest.clipsToBounds = true
+//        btnShowRest.layer.cornerRadius = 5
+//        btnShowRest.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
     
@@ -94,22 +94,20 @@ extension FilterViewController: UITableViewDelegate,UITableViewDataSource {
             return "FILTER BY"
         }
     }
-    
-
 }
 
 
 
 class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var SortCollectionView: UICollectionView!
+    @IBOutlet weak var sortCollectionView: UICollectionView!
     
     var imageArray = [String] ()
     var itemNames = [String] ()
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.SortCollectionView.delegate = self
-        self.SortCollectionView.dataSource = self
+        self.sortCollectionView.delegate = self
+        self.sortCollectionView.dataSource = self
         imageArray = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
         itemNames = ["Relevance","Rating","Delivery Time","Delivery Free","Minimum Order"]
     }
@@ -122,7 +120,7 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell: SortCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SortCollectionViewCell", for: indexPath) as? SortCollectionViewCell
+        if let cell: sortCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sortCollectionViewCell", for: indexPath) as? sortCollectionViewCell
         {
             
             cell.imgSortItems.image = UIImage(named: imageArray[indexPath.row])
@@ -135,16 +133,11 @@ class SortyByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = (collectionView.bounds.width / 5) - 2 * 5
         return CGSize(width: itemWidth, height: collectionView.frame.height)
-
-
     }
-
-
 }
 
 class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-
     @IBOutlet weak var filterCollectionView: UICollectionView!
     var cuisineNames = [String] ()
     override func awakeFromNib() {
@@ -185,22 +178,6 @@ class FilterByCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
         return 2
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        switch kind {
-//
-//        case UICollectionView.elementKindSectionHeader:
-//
-//            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
-//
-////            headerView.backgroundColor = UIColor.blue
-//            return headerView
-//
-//        default:
-//
-//            assert(false, "Unexpected element kind")
-//        }
-//    }
-    
 }
 class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -212,14 +189,13 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         self.topCuisinesCollection.delegate = self
         self.topCuisinesCollection.dataSource = self
        cuisineNames = ["Snacks","Sandwitches","Pizza","Ice creams","Coffee"]
-       // imageArray = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
+
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cuisineNames.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -230,7 +206,6 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
             cell.viewItems.layer.borderWidth = 1
             cell.viewItems.layer.borderColor = UIColor.black.cgColor
             cell.lblItems.text = cuisineNames[indexPath.row]
-           // cell.imgItems.image = UIImage(named: imageArray[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -238,10 +213,10 @@ class TopCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let itemsPerRow:CGFloat = 3
-        let hardCodedPadding:CGFloat = 5
-        let itemWidth = (collectionView.bounds.width / itemsPerRow) - 2 * itemsPerRow
-        let itemHeight = (collectionView.bounds.height / 2) - hardCodedPadding
+        let coloumns:CGFloat = 3
+        let padding:CGFloat = 5
+        let itemWidth = (collectionView.bounds.width / coloumns) - 2 * coloumns
+        let itemHeight = (collectionView.bounds.height / 2) - padding
         
         return CGSize(width: itemWidth, height: itemHeight)
         
@@ -261,8 +236,6 @@ class AllCuisinesCell: UITableViewCell, UITableViewDelegate, UITableViewDataSour
         super.awakeFromNib()
         allCuisinesTableView.delegate = self
         allCuisinesTableView.dataSource = self
-       // self.allCuisinesTableView.delegate = self
-       // self.allCuisinesTableView.dataSource = self
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -293,14 +266,12 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
         self.allCuisinesCollectionView.delegate = self
         self.allCuisinesCollectionView.dataSource = self
         cuisineNames = ["Snacks","Sandwitches","Pizza"]
-        // imageArray = ["relevance.png","rating.png","deliveryTime.png","freeDelivery.png","minimumOrder.png"]
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cuisineNames.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -319,16 +290,6 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
         let itemWidth = (collectionView.bounds.width / 3) - 2 * 5
         return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let itemsPerRow:CGFloat = 3
-//        let hardCodedPadding:CGFloat = 5
-//        let itemWidth = (collectionView.bounds.width / itemsPerRow) - 2 * itemsPerRow
-//        let itemHeight = (collectionView.bounds.height / 2) - hardCodedPadding
-//
-//        return CGSize(width: itemWidth, height: itemHeight)
-//
-//    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
@@ -336,67 +297,11 @@ class AllCuisinesTableViewCell:UITableViewCell, UICollectionViewDelegate, UIColl
         return 2
     }
 
-    
-    
-    
 }
-//class AllCuisinesCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//
-//
-//    @IBOutlet weak var allCuisinesCollection: UICollectionView!
-//
-//    var dishesNames = [String] ()
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        self.allCuisinesCollection.delegate = self
-//        self.allCuisinesCollection.dataSource = self
-//
-//        dishesNames = ["Relevance","Rating","Delivery Time","Delivery Free","Minimum Order"]
-//    }
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return dishesNames.count
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if let cell: AllCuisinesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllCuisinesCollectionViewCell", for: indexPath) as? AllCuisinesCollectionViewCell
-//        {
-//            cell.viewDishes.layer.cornerRadius = 10
-//            cell.viewDishes.clipsToBounds = true
-//            cell.viewDishes.layer.borderWidth = 1
-//            cell.viewDishes.layer.borderColor = UIColor.black.cgColor
-//            cell.lblDishes.text = dishesNames[indexPath.row]
-//            return cell
-//
-//        }
-//        return UICollectionViewCell()
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let itemsPerRow:CGFloat = 3
-//        let hardCodedPadding:CGFloat = 5
-//        let itemWidth = (collectionView.bounds.width / itemsPerRow) - 2 * itemsPerRow
-//        let itemHeight = (collectionView.bounds.height / 2) - hardCodedPadding
-//
-//        return CGSize(width: itemWidth, height: itemHeight)
-//
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 2
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 2
-//    }
-//
-//}
-class SortCollectionViewCell: UICollectionViewCell {
+
+class sortCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imgSortItems: UIImageView!
-    
     @IBOutlet weak var lblSortItems: UILabel!
     
     override func awakeFromNib() {
@@ -407,7 +312,6 @@ class SortCollectionViewCell: UICollectionViewCell {
 class FilterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var viewBudget: UIView!
-    
     @IBOutlet weak var lblBudget: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -416,9 +320,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
 
 class TopCuisinesCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var viewItems: UIView!
-    
     @IBOutlet weak var lblItems: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -427,9 +329,7 @@ class TopCuisinesCollectionViewCell: UICollectionViewCell {
 
 class AllCuisinesCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var viewItems: UIView!
-    
     @IBOutlet weak var lblItems: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

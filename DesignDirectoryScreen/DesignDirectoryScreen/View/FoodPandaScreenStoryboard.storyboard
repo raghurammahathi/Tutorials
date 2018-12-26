@@ -180,7 +180,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9UK-iz-T5H">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HOj-13-qB1">
                                                         <size key="itemSize" width="150" height="100"/>
@@ -189,8 +189,8 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SortCollectionViewCell" id="pY5-96-YA2" customClass="SortCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sortCollectionViewCell" id="pY5-96-YA2" customClass="sortCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.5" width="150" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
@@ -236,7 +236,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="SortCollectionView" destination="9UK-iz-T5H" id="m8G-Ma-Led"/>
+                                            <outlet property="sortCollectionView" destination="9UK-iz-T5H" id="m8G-Ma-Led"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterByCell" rowHeight="81" id="Xxs-Z8-86K" userLabel="FilterByCell" customClass="FilterByCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
@@ -247,7 +247,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bcu-PJ-GbK" userLabel="Filter Collection View">
-                                                    <rect key="frame" x="0.0" y="40" width="375" height="41"/>
+                                                    <rect key="frame" x="0.0" y="40" width="375" height="41.5"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ocx-ht-U3w">
                                                         <size key="itemSize" width="130" height="40"/>
@@ -257,7 +257,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCollectionViewCell" id="5pZ-5l-vYv" customClass="FilterCollectionViewCell" customModule="DesignDirectoryScreen" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.5" width="130" height="40"/>
+                                                            <rect key="frame" x="0.0" y="1" width="130" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
@@ -334,7 +334,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-du-hDZ" userLabel="Top cuisine Collection View">
-                                                    <rect key="frame" x="0.0" y="40" width="375" height="90"/>
+                                                    <rect key="frame" x="0.0" y="40" width="375" height="90.5"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8su-S1-SXV">
                                                         <size key="itemSize" width="130" height="40"/>
