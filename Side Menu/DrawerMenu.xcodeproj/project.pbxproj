@@ -14,6 +14,7 @@
 		B03F63EE21D34E340057CBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F63EC21D34E340057CBA5 /* LaunchScreen.storyboard */; };
 		B03F63F621D352A80057CBA5 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F63F521D352A80057CBA5 /* SideMenuVC.swift */; };
 		B03F640021D3891A0057CBA5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F63FF21D3891A0057CBA5 /* MainVC.swift */; };
+		B05A034421D4D83A00192344 /* BackgroundView copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A034321D4D83A00192344 /* BackgroundView copy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B03F63EF21D34E340057CBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03F63F521D352A80057CBA5 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		B03F63FF21D3891A0057CBA5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B05A034321D4D83A00192344 /* BackgroundView copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BackgroundView copy.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B03F63E721D34E300057CBA5 /* Main.storyboard */,
+				B05A034321D4D83A00192344 /* BackgroundView copy.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03F63E621D34E300057CBA5 /* ContainerVC.swift in Sources */,
+				B05A034421D4D83A00192344 /* BackgroundView copy.swift in Sources */,
 				B03F640021D3891A0057CBA5 /* MainVC.swift in Sources */,
 				B03F63E421D34E300057CBA5 /* AppDelegate.swift in Sources */,
 				B03F63F621D352A80057CBA5 /* SideMenuVC.swift in Sources */,
