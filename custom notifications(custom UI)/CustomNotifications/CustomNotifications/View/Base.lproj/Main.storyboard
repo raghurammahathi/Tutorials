@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,10 +20,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyv-Wp-ZVt">
                                 <rect key="frame" x="81" y="43" width="213" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7IS-5e-BIy"/>
-                                    <constraint firstAttribute="width" constant="213" id="A79-ie-54y"/>
-                                </constraints>
                                 <state key="normal" title="Send notification"/>
                                 <connections>
                                     <action selector="onSendNotTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VyR-ZV-3bz"/>

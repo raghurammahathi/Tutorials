@@ -61,6 +61,7 @@
 		B03FE13F21DF5D6A0020F990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B03FE14121DF5D6A0020F990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03FE14921DF68380020F990 /* AppDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExtension.swift; sourceTree = "<group>"; };
+		B03FE14E21DF7EFC0020F990 /* CustomNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomNotifications.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +106,11 @@
 		B03FE11C21DF3E570020F990 /* CustomNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				B03FE11D21DF3E570020F990 /* AppDelegate.swift */,
-				B03FE14921DF68380020F990 /* AppDelegateExtension.swift */,
-				B03FE11F21DF3E570020F990 /* ViewController.swift */,
+				B056FA3021DF84FE009913EB /* AppDelegates */,
+				B056FA2F21DF84CC009913EB /* Controller */,
+				B056FA2E21DF84B3009913EB /* View */,
+				B03FE14E21DF7EFC0020F990 /* CustomNotifications.entitlements */,
 				B03FE12F21DF49FD0020F990 /* newLiked.png */,
-				B03FE12121DF3E570020F990 /* Main.storyboard */,
 				B03FE12421DF3E590020F990 /* Assets.xcassets */,
 				B03FE12621DF3E590020F990 /* LaunchScreen.storyboard */,
 				B03FE12921DF3E590020F990 /* Info.plist */,
@@ -134,6 +135,31 @@
 				B03FE14121DF5D6A0020F990 /* Info.plist */,
 			);
 			path = "Notification content app extension";
+			sourceTree = "<group>";
+		};
+		B056FA2E21DF84B3009913EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B03FE12121DF3E570020F990 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B056FA2F21DF84CC009913EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B03FE11F21DF3E570020F990 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B056FA3021DF84FE009913EB /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				B03FE11D21DF3E570020F990 /* AppDelegate.swift */,
+				B03FE14921DF68380020F990 /* AppDelegateExtension.swift */,
+			);
+			path = AppDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +213,11 @@
 				TargetAttributes = {
 					B03FE11921DF3E570020F990 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					B03FE13421DF5D690020F990 = {
 						CreatedOnToolsVersion = 10.0;
