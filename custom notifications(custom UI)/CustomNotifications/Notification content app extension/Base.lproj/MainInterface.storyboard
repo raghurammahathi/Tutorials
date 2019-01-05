@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Succesfully subscribed!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                <rect key="frame" x="63" y="0.0" width="195" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -33,16 +33,29 @@
                                     <action selector="onSubscribeBtnTap:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="yDf-F3-aYC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-SW-OUN">
+                                <rect key="frame" x="289" y="6" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Mnu-K9-2Xe"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="newLike.png"/>
+                                <connections>
+                                    <action selector="onLikeBtnTap:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Nv0-l3-Kf4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" symbolic="YES" id="0Q0-KW-PJ6"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" symbolic="YES" id="6Vq-gs-PHe"/>
+                            <constraint firstItem="aJc-SW-OUN" firstAttribute="centerY" secondItem="GcN-lo-r42" secondAttribute="centerY" id="0YM-5M-8s2"/>
+                            <constraint firstItem="aJc-SW-OUN" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="31" id="5Ha-uD-HhD"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="63" id="6Vq-gs-PHe"/>
                             <constraint firstItem="SaE-9j-KFP" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="2" id="JrE-sb-aeW"/>
-                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" symbolic="YES" id="L8K-9R-egU"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="62" id="L8K-9R-egU"/>
                             <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="SaE-9j-KFP" secondAttribute="bottom" constant="2" id="ZLN-aD-rP5"/>
                             <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="SaE-9j-KFP" secondAttribute="trailing" constant="114" id="mGS-2v-WDI"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="aJc-SW-OUN" secondAttribute="trailing" constant="6" id="nhO-iP-Tgq"/>
                             <constraint firstItem="SaE-9j-KFP" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="114" id="wSO-y4-KRb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
@@ -51,6 +64,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
                     <connections>
+                        <outlet property="btnLikeUnlike" destination="aJc-SW-OUN" id="2bn-sR-r42"/>
                         <outlet property="btnSubscribe" destination="SaE-9j-KFP" id="Ob8-wf-H05"/>
                         <outlet property="label" destination="GcN-lo-r42" id="lpW-cU-7IG"/>
                     </connections>
@@ -60,4 +74,7 @@
             <point key="canvasLocation" x="131.19999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="newLike.png" width="512" height="512"/>
+    </resources>
 </document>

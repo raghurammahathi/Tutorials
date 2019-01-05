@@ -17,9 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (authorized:Bool, error:Error?) in
-            if !authorized {
-                print("not authorized")
+        if #available(iOS 12.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .provisional]) { (authorized:Bool, error:Error?) in
+                if !authorized {
+                    print("not authorized")
+                }
+            }
+        } else {
+            // Fallback on earlier versions
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound,]) { (authorized:Bool, error:Error?) in
+                if !authorized {
+                    print("not authorized")
+                }
             }
         }
         setNotificationCategory()

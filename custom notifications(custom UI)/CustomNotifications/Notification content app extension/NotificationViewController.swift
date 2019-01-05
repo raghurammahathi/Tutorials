@@ -15,6 +15,18 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     @IBOutlet var label: UILabel!
     @IBOutlet weak var btnSubscribe: UIButton!
     
+    @IBOutlet weak var btnLikeUnlike: UIButton!
+    @IBAction func onLikeBtnTap(_ sender: UIButton) {
+        if btnLikeUnlike.isSelected == true {
+            btnLikeUnlike.isSelected = false
+            btnLikeUnlike.setImage(UIImage(named: "newLike"), for: UIControl.State.normal)
+            
+        }else {
+            btnLikeUnlike.isSelected = true
+            btnLikeUnlike.setImage(UIImage(named: "newLiked"), for: UIControl.State.normal)
+
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         label.alpha = 0.0

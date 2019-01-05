@@ -29,7 +29,7 @@ extension AppDelegate {
         content.categoryIdentifier = "category"
         content.sound = UNNotificationSound.default
         
-        guard let path = Bundle.main.path(forResource: "newLiked", ofType: "png") else  {return}
+        guard let path = Bundle.main.path(forResource: "icon copy", ofType: "png") else  {return}
         let url = URL(fileURLWithPath: path)
         
         do {

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B001E5FE21E0B86B00AFC1CB /* newLike.png in Resources */ = {isa = PBXBuildFile; fileRef = B001E5FD21E0B86A00AFC1CB /* newLike.png */; };
+		B001E60021E0BA7500AFC1CB /* icon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = B001E5FF21E0BA7500AFC1CB /* icon copy.png */; };
+		B001E60121E0BAEE00AFC1CB /* newLiked.png in Resources */ = {isa = PBXBuildFile; fileRef = B03FE12F21DF49FD0020F990 /* newLiked.png */; };
 		B03FE11E21DF3E570020F990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE11D21DF3E570020F990 /* AppDelegate.swift */; };
 		B03FE12021DF3E570020F990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE11F21DF3E570020F990 /* ViewController.swift */; };
 		B03FE12321DF3E570020F990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03FE12121DF3E570020F990 /* Main.storyboard */; };
 		B03FE12521DF3E590020F990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03FE12421DF3E590020F990 /* Assets.xcassets */; };
 		B03FE12821DF3E590020F990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03FE12621DF3E590020F990 /* LaunchScreen.storyboard */; };
-		B03FE13021DF49FD0020F990 /* newLiked.png in Resources */ = {isa = PBXBuildFile; fileRef = B03FE12F21DF49FD0020F990 /* newLiked.png */; };
 		B03FE13821DF5D690020F990 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03FE13721DF5D690020F990 /* UserNotifications.framework */; };
 		B03FE13A21DF5D6A0020F990 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03FE13921DF5D6A0020F990 /* UserNotificationsUI.framework */; };
 		B03FE13D21DF5D6A0020F990 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE13C21DF5D6A0020F990 /* NotificationViewController.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B001E5FD21E0B86A00AFC1CB /* newLike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newLike.png; sourceTree = "<group>"; };
+		B001E5FF21E0BA7500AFC1CB /* icon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon copy.png"; sourceTree = "<group>"; };
 		B03FE11A21DF3E570020F990 /* CustomNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03FE11D21DF3E570020F990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03FE11F21DF3E570020F990 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +114,6 @@
 				B056FA2F21DF84CC009913EB /* Controller */,
 				B056FA2E21DF84B3009913EB /* View */,
 				B03FE14E21DF7EFC0020F990 /* CustomNotifications.entitlements */,
-				B03FE12F21DF49FD0020F990 /* newLiked.png */,
 				B03FE12421DF3E590020F990 /* Assets.xcassets */,
 				B03FE12621DF3E590020F990 /* LaunchScreen.storyboard */,
 				B03FE12921DF3E590020F990 /* Info.plist */,
@@ -131,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				B03FE13C21DF5D6A0020F990 /* NotificationViewController.swift */,
+				B001E5FD21E0B86A00AFC1CB /* newLike.png */,
+				B03FE12F21DF49FD0020F990 /* newLiked.png */,
 				B03FE13E21DF5D6A0020F990 /* MainInterface.storyboard */,
 				B03FE14121DF5D6A0020F990 /* Info.plist */,
 			);
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				B03FE11D21DF3E570020F990 /* AppDelegate.swift */,
+				B001E5FF21E0BA7500AFC1CB /* icon copy.png */,
 				B03FE14921DF68380020F990 /* AppDelegateExtension.swift */,
 			);
 			path = AppDelegates;
@@ -250,8 +256,8 @@
 			files = (
 				B03FE12821DF3E590020F990 /* LaunchScreen.storyboard in Resources */,
 				B03FE12521DF3E590020F990 /* Assets.xcassets in Resources */,
-				B03FE13021DF49FD0020F990 /* newLiked.png in Resources */,
 				B03FE12321DF3E570020F990 /* Main.storyboard in Resources */,
+				B001E60021E0BA7500AFC1CB /* icon copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03FE14021DF5D6A0020F990 /* MainInterface.storyboard in Resources */,
+				B001E5FE21E0B86B00AFC1CB /* newLike.png in Resources */,
+				B001E60121E0BAEE00AFC1CB /* newLiked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
