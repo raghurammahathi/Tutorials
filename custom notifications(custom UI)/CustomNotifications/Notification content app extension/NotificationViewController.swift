@@ -37,6 +37,37 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
        // self.label?.text = notification.request.content.body
     }
 
+    func didReceive(_ response: UNNotificationResponse, completionHandler completion:
+        (UNNotificationContentExtensionResponseOption) -> Void) {
+        guard let currentActions = extensionContext?.notificationActions else { return }
+        
+        if response.actionIdentifier == "wishlist-action" {
+            let pauseAction = UNNotificationAction(identifier: "pause-action", title: "Remove from wish list", options: [])
+            let otherAction = currentActions[1]
+            let newActions = [pauseAction, otherAction]
+            extensionContext?.notificationActions = newActions
+            
+        } else if response.actionIdentifier == "queue-action" {
+            let removeAction = UNNotificationAction(identifier: "remove-action", title: "Remove from Queue", options: [])
+            let otherAction = currentActions[0]
+            let newActions = [otherAction, removeAction]
+            extensionContext?.notificationActions = newActions
+            
+        }  else if response.actionIdentifier == "pause-action" {
+            let playAction = UNNotificationAction(identifier: "wishlist-action", title: "Add to wish list", options: [])
+            let otherAction = currentActions[1]
+            let newActions = [playAction, otherAction]
+            extensionContext?.notificationActions = newActions
+            
+        } else if response.actionIdentifier == "remove-action" {
+            let queueAction = UNNotificationAction(identifier: "queue-action", title: "Queue Next", options: [])
+            let otherAction = currentActions[0]
+            let newActions = [otherAction, queueAction]
+            extensionContext?.notificationActions = newActions
+        }
+        completion(.doNotDismiss)
+    }
+    
     @IBAction func onSubscribeBtnTap(_ sender: Any) {
         UIView.animate(withDuration: 2.0) {
             self.btnSubscribe.alpha = 0.0

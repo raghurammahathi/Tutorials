@@ -15,8 +15,10 @@ extension AppDelegate {
     
     //   let okAction = UNNotificationAction(identifier: "ok", title: "OK", options:[])
     //   let cancelAction = UNNotificationAction(identifier: "cancel", title: "cancel", options: [])
-    
-    let category = UNNotificationCategory(identifier: "category", actions: [], intentIdentifiers: [], options: [])
+        let wishlistAction = UNNotificationAction(identifier: "wishlist-action", title: "Add to wish list", options: [])
+        let queueAction = UNNotificationAction(identifier: "queue-action", title: "Queue Next", options: [])
+        
+    let category = UNNotificationCategory(identifier: "category", actions: [wishlistAction, queueAction], intentIdentifiers: [], options: [])
     UNUserNotificationCenter.current().setNotificationCategories([category])
     }
     

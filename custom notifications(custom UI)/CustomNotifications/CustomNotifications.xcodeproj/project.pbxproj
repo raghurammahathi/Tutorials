@@ -162,8 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				B03FE11D21DF3E570020F990 /* AppDelegate.swift */,
-				B001E5FF21E0BA7500AFC1CB /* icon copy.png */,
 				B03FE14921DF68380020F990 /* AppDelegateExtension.swift */,
+				B001E5FF21E0BA7500AFC1CB /* icon copy.png */,
 			);
 			path = AppDelegates;
 			sourceTree = "<group>";
