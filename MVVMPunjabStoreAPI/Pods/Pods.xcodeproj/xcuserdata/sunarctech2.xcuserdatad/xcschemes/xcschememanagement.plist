@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ShoppingTask.xcscheme</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
-		<key>ShoppingTask.xcscheme_^#shared#^_</key>
+		<key>Pods-ShoppingTask.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
