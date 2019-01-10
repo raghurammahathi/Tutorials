@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
       
         tabBarCollection.backgroundColor = UIColor.init(red: 63/255, green: 79/255, blue: 181/255, alpha: 1)
+        let selectedIndex = NSIndexPath(item: 0, section: 0)
+        tabBarCollection.selectItem(at: selectedIndex as IndexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.right)
         
     }
 
@@ -36,10 +38,21 @@ class ViewController: UIViewController {
 }
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
+    
+    
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.x)
         barLeftConstraint.constant = scrollView.contentOffset.x/3
         
+    }
+    
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let index = targetContentOffset.pointee.x/view.frame.width
+        let indexPath = NSIndexPath(item: Int(index), section: 0)
+        tabBarCollection.selectItem(at: indexPath as IndexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.right)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,7 +76,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
             if let IconsCell: IconsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconsCell", for: indexPath) as? IconsCell
             {
 
-                IconsCell.imgSortItems.image = UIImage(named: sortImages[indexPath.row])
+                IconsCell.imgSortItems.image = UIImage(named: sortImages[indexPath.row])?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                IconsCell.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
 
                 return IconsCell
             }
@@ -126,7 +140,17 @@ class IconsCell: UICollectionViewCell {
     
     @IBOutlet weak var imgSortItems: UIImageView!
     
-    
+    override var isSelected: Bool {
+        didSet{
+            if isSelected == true {
+                imgSortItems.tintColor = UIColor.white
+            } else {
+                imgSortItems.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
+            }
+            
+//            imgSortItems.tintColor = isHighlighted == false ? UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1) : UIColor.white
+        }
+    }
     
     
 }
