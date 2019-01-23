@@ -8,6 +8,9 @@
 
 import UIKit
 
+var productsNames = ["Amazon Pay","Scan","Recharges","Pay Bills","Offers"]
+var productImages = ["purse.png","qrcode.png","purse.png","qrcode.png","purse.png"]
+
 class CategoryCollection: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     override func awakeFromNib() {
@@ -16,12 +19,14 @@ class CategoryCollection: UICollectionView, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return productsNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let productsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsCell", for: indexPath) as! ProductsCell
+        productsCell.productLbl.text = productsNames[indexPath.row]
+        productsCell.productImage.image = UIImage(named: productImages[indexPath.row])
         return productsCell
     }
     
@@ -29,13 +34,5 @@ class CategoryCollection: UICollectionView, UICollectionViewDelegate, UICollecti
         let itemWidth = (UIScreen.main.bounds.width / 5) - 2 * 5
         return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

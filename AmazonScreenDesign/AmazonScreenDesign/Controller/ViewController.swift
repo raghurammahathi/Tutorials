@@ -32,7 +32,7 @@ class ViewController: UIViewController , UICollectionViewDelegate, UICollectionV
             row = 0
         }
         
-        scrollingTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector:#selector(ViewController.startTimer(theTimer:)), userInfo: row, repeats: true)
+        scrollingTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector:#selector(ViewController.startTimer(theTimer:)), userInfo: row, repeats: true)
         
         return bannersSliderCell
     }
@@ -50,7 +50,7 @@ class ViewController: UIViewController , UICollectionViewDelegate, UICollectionV
 
         @objc func startTimer(theTimer: Timer) {
     
-            UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 3.0, delay: 0, options: .curveEaseOut, animations: {
                 self.sliderCollection.scrollToItem(at: IndexPath(row: theTimer.userInfo as! Int, section: 0), at: .centeredHorizontally, animated: false)
             }, completion: nil)
     

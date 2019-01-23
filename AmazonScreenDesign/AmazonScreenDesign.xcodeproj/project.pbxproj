@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4B7662D21F859EE008A7B24 /* CustomTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7662C21F859EE008A7B24 /* CustomTopView.swift */; };
+		A4B7663121F86589008A7B24 /* CustomOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7663021F86589008A7B24 /* CustomOfferView.swift */; };
 		A4B9974321F6F0D000F3E6CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9974221F6F0D000F3E6CB /* AppDelegate.swift */; };
 		A4B9974521F6F0D100F3E6CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9974421F6F0D100F3E6CB /* ViewController.swift */; };
 		A4B9974821F6F0D100F3E6CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B9974621F6F0D100F3E6CB /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4B7662C21F859EE008A7B24 /* CustomTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTopView.swift; sourceTree = "<group>"; };
+		A4B7663021F86589008A7B24 /* CustomOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOfferView.swift; sourceTree = "<group>"; };
 		A4B9973F21F6F0D000F3E6CB /* AmazonScreenDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazonScreenDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B9974221F6F0D000F3E6CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B9974421F6F0D100F3E6CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				A4B9976821F7503300F3E6CB /* CustomBackView.swift */,
+				A4B7662C21F859EE008A7B24 /* CustomTopView.swift */,
+				A4B7663021F86589008A7B24 /* CustomOfferView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -191,12 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B7663121F86589008A7B24 /* CustomOfferView.swift in Sources */,
 				A4B9976921F7503400F3E6CB /* CustomBackView.swift in Sources */,
 				A4B9974521F6F0D100F3E6CB /* ViewController.swift in Sources */,
 				A4B9975721F70D2F00F3E6CB /* CategoryCollection.swift in Sources */,
 				A4B9976121F7120700F3E6CB /* ProductsCell.swift in Sources */,
 				A4B9976321F71DAA00F3E6CB /* CarouselCell.swift in Sources */,
 				A4B9974321F6F0D000F3E6CB /* AppDelegate.swift in Sources */,
+				A4B7662D21F859EE008A7B24 /* CustomTopView.swift in Sources */,
 				A4B9975521F70D0300F3E6CB /* HomeTable.swift in Sources */,
 				A4B9975B21F70FBA00F3E6CB /* FeaturedCell.swift in Sources */,
 				A4B9975F21F711B700F3E6CB /* CategoryCell.swift in Sources */,

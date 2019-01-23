@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "qr-code.png",
+      "filename" : "qrcode.png",
       "scale" : "1x"
     },
     {
