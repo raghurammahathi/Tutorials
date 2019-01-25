@@ -43,6 +43,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4B43DB321FAE7E100F9A644 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4DE567621F9CD0F002B25DB /* ViewController.swift */,
+				A4D0CE0121F9FC9500BDA42A /* FirstViewController.swift */,
+				A4D0CE0321F9FCBE00BDA42A /* SecondViewController.swift */,
+				A4D0CE0521F9FCDC00BDA42A /* ThirdViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4B43DB421FAE80400F9A644 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4DE567D21F9CD10002B25DB /* LaunchScreen.storyboard */,
+				A4DE567821F9CD0F002B25DB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4B43DB521FAE81E00F9A644 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4DE568621F9CD63002B25DB /* CustomTabBarController.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		A4DE566821F9CD0F002B25DB = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +90,12 @@
 		A4DE567321F9CD0F002B25DB /* ViewPagerUsingTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				A4B43DB521FAE81E00F9A644 /* CustomTabBar */,
+				A4B43DB421FAE80400F9A644 /* View */,
+				A4B43DB321FAE7E100F9A644 /* Controllers */,
 				A4DE567421F9CD0F002B25DB /* AppDelegate.swift */,
-				A4DE567621F9CD0F002B25DB /* ViewController.swift */,
-				A4DE567821F9CD0F002B25DB /* Main.storyboard */,
 				A4DE567B21F9CD10002B25DB /* Assets.xcassets */,
-				A4DE567D21F9CD10002B25DB /* LaunchScreen.storyboard */,
 				A4DE568021F9CD10002B25DB /* Info.plist */,
-				A4DE568621F9CD63002B25DB /* CustomTabBarController.swift */,
-				A4D0CE0121F9FC9500BDA42A /* FirstViewController.swift */,
-				A4D0CE0321F9FCBE00BDA42A /* SecondViewController.swift */,
-				A4D0CE0521F9FCDC00BDA42A /* ThirdViewController.swift */,
 			);
 			path = ViewPagerUsingTabBarController;
 			sourceTree = "<group>";
