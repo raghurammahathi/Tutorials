@@ -57,10 +57,20 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let colors: [UIColor] = [.gray, .orange, .purple]
+       // let colors: [UIColor] = [.gray, .orange, .purple]
         if collectionView == self.collection {
             let cell = collection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-            cell.backgroundColor = colors[indexPath.item]
+            let oneVC = OneViewController()
+            let oneVcView = oneVC.view
+            let twoVC = TwoViewController()
+            let twoVCView = twoVC.view
+            let threeVC = ThreeViewController()
+            let threeVCView = threeVC.view
+
+            let viewsArray = [oneVcView, twoVCView, threeVCView]
+            
+            cell.contentView.addSubview(viewsArray[indexPath.row]!)
+           // cell.backgroundColor = colors[indexPath.item]
             return cell
         }
         else {
