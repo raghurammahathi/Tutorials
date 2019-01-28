@@ -12,21 +12,21 @@ class OneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.orange
+      //  view.backgroundColor = UIColor.orange
         
-        let newView = UIView()
-        newView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        newView.backgroundColor = UIColor.gray
-        view.addSubview(newView)
+//        let newView = UIView()
+//        newView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+//        newView.backgroundColor = UIColor.gray
+//        view.addSubview(newView)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let newView2 = UIView()
-        newView2.frame = CGRect(x: 0, y: 120, width: 100, height: 100)
-        newView2.backgroundColor = UIColor.black
-        view.addSubview(newView2)
+//        let newView2 = UIView()
+//        newView2.frame = CGRect(x: 0, y: 100, width: 100, height: 100)
+//        newView2.backgroundColor = UIColor.black
+//        view.addSubview(newView2)
     }
     /*
     // MARK: - Navigation

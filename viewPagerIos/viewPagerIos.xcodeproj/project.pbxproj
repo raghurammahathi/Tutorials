@@ -10,6 +10,9 @@
 		A48CDFD121FCC7B600CF426F /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CDFD021FCC7B600CF426F /* OneViewController.swift */; };
 		A48CDFD321FCCEBC00CF426F /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CDFD221FCCEBC00CF426F /* TwoViewController.swift */; };
 		A48CDFD521FCCEC900CF426F /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CDFD421FCCEC900CF426F /* ThreeViewController.swift */; };
+		A4B9B33C21FF011500469724 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9B33B21FF011500469724 /* FourViewController.swift */; };
+		A4B9B33E21FF012600469724 /* FiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9B33D21FF012600469724 /* FiveViewController.swift */; };
+		A4B9B34021FF013300469724 /* SixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9B33F21FF013300469724 /* SixViewController.swift */; };
 		B037106221E60105006FD9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037106121E60105006FD9E5 /* AppDelegate.swift */; };
 		B037106421E60105006FD9E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037106321E60105006FD9E5 /* ViewController.swift */; };
 		B037106721E60106006FD9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B037106521E60106006FD9E5 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		A48CDFD021FCC7B600CF426F /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		A48CDFD221FCCEBC00CF426F /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		A48CDFD421FCCEC900CF426F /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		A4B9B33B21FF011500469724 /* FourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
+		A4B9B33D21FF012600469724 /* FiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveViewController.swift; sourceTree = "<group>"; };
+		A4B9B33F21FF013300469724 /* SixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixViewController.swift; sourceTree = "<group>"; };
 		B037105E21E60105006FD9E5 /* viewPagerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viewPagerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B037106121E60105006FD9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B037106321E60105006FD9E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				A48CDFD021FCC7B600CF426F /* OneViewController.swift */,
 				A48CDFD221FCCEBC00CF426F /* TwoViewController.swift */,
 				A48CDFD421FCCEC900CF426F /* ThreeViewController.swift */,
+				A4B9B33B21FF011500469724 /* FourViewController.swift */,
+				A4B9B33D21FF012600469724 /* FiveViewController.swift */,
+				A4B9B33F21FF013300469724 /* SixViewController.swift */,
 			);
 			path = viewPagerIos;
 			sourceTree = "<group>";
@@ -144,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B9B33E21FF012600469724 /* FiveViewController.swift in Sources */,
 				A48CDFD121FCC7B600CF426F /* OneViewController.swift in Sources */,
 				B037106421E60105006FD9E5 /* ViewController.swift in Sources */,
+				A4B9B33C21FF011500469724 /* FourViewController.swift in Sources */,
 				B037106221E60105006FD9E5 /* AppDelegate.swift in Sources */,
+				A4B9B34021FF013300469724 /* SixViewController.swift in Sources */,
 				A48CDFD321FCCEBC00CF426F /* TwoViewController.swift in Sources */,
 				A48CDFD521FCCEC900CF426F /* ThreeViewController.swift in Sources */,
 			);

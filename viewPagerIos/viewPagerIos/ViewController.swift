@@ -8,7 +8,7 @@
 
 import UIKit
 
-var sortImages = ["form-icon.png","important.png","form-icon.png"]
+var sortImages = ["form-icon.png","important.png","form-icon.png","form-icon.png","important.png","form-icon.png"]
 class ViewController: UIViewController {
 
   let cellId = "cellId"
@@ -37,10 +37,9 @@ class ViewController: UIViewController {
 
 }
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.x)
-        barLeftConstraint.constant = scrollView.contentOffset.x/3
+        barLeftConstraint.constant = scrollView.contentOffset.x/6
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -51,26 +50,43 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collection {
-            return 3
+            return 6
         }
-        return 3
+        return sortImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       // let colors: [UIColor] = [.gray, .orange, .purple]
         if collectionView == self.collection {
             let cell = collection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-            let oneVC = OneViewController()
+           
+            let oneVC = storyboard?.instantiateViewController(withIdentifier: "OneViewController") as! OneViewController
+            oneVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             let oneVcView = oneVC.view
-            let twoVC = TwoViewController()
+            
+            let twoVC = storyboard?.instantiateViewController(withIdentifier: "TwoViewController") as! TwoViewController
+            twoVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             let twoVCView = twoVC.view
-            let threeVC = ThreeViewController()
+            
+            let threeVC = storyboard?.instantiateViewController(withIdentifier: "ThreeViewController") as! ThreeViewController
+            threeVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             let threeVCView = threeVC.view
 
-            let viewsArray = [oneVcView, twoVCView, threeVCView]
+            let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
+            fourVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+            let fourVcView = fourVC.view
+            
+            let fiveVC = storyboard?.instantiateViewController(withIdentifier: "FiveViewController") as! FiveViewController
+            fiveVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+            let fiveVcView = fiveVC.view
+            
+            let sixVC = storyboard?.instantiateViewController(withIdentifier: "SixViewController") as! SixViewController
+            sixVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+            let sixVcView = sixVC.view
+            
+            let viewsArray = [oneVcView, twoVCView, threeVCView, fourVcView, fiveVcView, sixVcView]
             
             cell.contentView.addSubview(viewsArray[indexPath.row]!)
-           // cell.backgroundColor = colors[indexPath.item]
+
             return cell
         }
         else {
@@ -88,7 +104,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
         if collectionView == self.collection {
             return CGSize(width: view.frame.width, height: view.frame.height)
         }else if collectionView == tabBarCollection{
-            return CGSize(width: view.frame.width/3, height: view.frame.height)
+            return CGSize(width: view.frame.width/6, height: view.frame.height)
         }
     return CGSize(width: 0, height: 0)
     }
@@ -96,22 +112,14 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == tabBarCollection{
             print(indexPath.item)
-            let x = CGFloat(indexPath.item) * view.frame.width/3
+            let x = CGFloat(indexPath.item) * view.frame.width/6
             barLeftConstraint.constant = x
-//            UIView.animate(withDuration: 0.75) {
-//                self.view.layoutIfNeeded()
-//            }
-            
-//            UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-//                self.view.layoutIfNeeded()
-//            }, completion: nil)
-            
-           scrolltoMenuIndex(menuIndex: indexPath.item)
+            scrolltoMenuIndex(menuIndex: indexPath.item)
         }
     }
     
     func scrolltoMenuIndex(menuIndex: Int){
-    
+
         let index = NSIndexPath(item: menuIndex, section: 0)
         collection.scrollToItem(at: index as IndexPath, at: UICollectionView.ScrollPosition.left, animated: false)
     }
@@ -126,7 +134,7 @@ class IconsCell: UICollectionViewCell {
             } else {
                 imgSortItems.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
             }
-//            imgSortItems.tintColor = isHighlighted == false ? UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1) : UIColor.white
+
         }
     }
 }

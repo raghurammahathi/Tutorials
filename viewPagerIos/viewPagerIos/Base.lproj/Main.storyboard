@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="64" id="gea-s9-B92"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8L-ew-d61" customClass="MenuBar" customModule="viewPagerIos" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8L-ew-d61">
                                 <rect key="frame" x="0.0" y="64" width="375" height="50"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-YR-i6U">
@@ -69,10 +69,10 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOo-Y6-NLD">
-                                        <rect key="frame" x="0.0" y="46" width="125" height="4"/>
+                                        <rect key="frame" x="0.0" y="46" width="62.5" height="4"/>
                                         <color key="backgroundColor" red="0.99963301420211792" green="0.24425676465034485" blue="0.51075059175491333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="125" id="BiD-8N-al7"/>
+                                            <constraint firstAttribute="width" constant="62.5" id="BiD-8N-al7"/>
                                             <constraint firstAttribute="height" constant="4" id="Oc7-dE-7rn"/>
                                         </constraints>
                                     </view>
@@ -98,7 +98,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ty2-3f-eLB">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="Ty2-3f-eLB">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -154,6 +154,51 @@
             </objects>
             <point key="canvasLocation" x="2057" y="139"/>
         </scene>
+        <!--Four View Controller-->
+        <scene sceneID="wDT-3R-6MQ">
+            <objects>
+                <viewController storyboardIdentifier="FourViewController" id="slJ-dF-Yd5" customClass="FourViewController" customModule="viewPagerIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSE-b2-qcX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.93725490199999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="EIx-uu-4Fd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4n0-VJ-AWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="134"/>
+        </scene>
+        <!--Five View Controller-->
+        <scene sceneID="AFB-cj-IPZ">
+            <objects>
+                <viewController storyboardIdentifier="FiveViewController" id="62m-3v-s4U" customClass="FiveViewController" customModule="viewPagerIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RXP-X1-Rr4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1987380661" green="1" blue="0.82418408949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="CON-mP-Bln"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpu-m2-mb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3305" y="135"/>
+        </scene>
+        <!--Six View Controller-->
+        <scene sceneID="pNG-bF-L7B">
+            <objects>
+                <viewController storyboardIdentifier="SixViewController" id="W35-Px-W6s" customClass="SixViewController" customModule="viewPagerIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGC-If-y6C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.569385641" blue="0.3286948529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9XH-45-FKm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZd-U1-kCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3948" y="134"/>
+        </scene>
         <!--One View Controller-->
         <scene sceneID="2ea-vO-MNe">
             <objects>
@@ -161,13 +206,36 @@
                     <view key="view" contentMode="scaleToFill" id="Ff8-gC-jEi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzA-ee-3t5">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fp7-Q4-6wp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.93557714859999996" green="1" blue="0.13340616759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="xOT-Eb-5F7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fp7-Q4-6wp" firstAttribute="leading" secondItem="95W-Vq-7Xl" secondAttribute="leading" id="J8g-dq-TUQ"/>
+                            <constraint firstItem="fp7-Q4-6wp" firstAttribute="trailing" secondItem="95W-Vq-7Xl" secondAttribute="trailing" id="YJZ-aI-EL4"/>
+                            <constraint firstItem="QzA-ee-3t5" firstAttribute="centerY" secondItem="Ff8-gC-jEi" secondAttribute="centerY" id="geA-0s-pbm"/>
+                            <constraint firstItem="fp7-Q4-6wp" firstAttribute="top" secondItem="Ff8-gC-jEi" secondAttribute="top" id="pwb-zL-iGt"/>
+                            <constraint firstItem="QzA-ee-3t5" firstAttribute="centerX" secondItem="Ff8-gC-jEi" secondAttribute="centerX" id="xIG-gM-3ja"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="95W-Vq-7Xl"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyN-QS-bhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="139"/>
+            <point key="canvasLocation" x="792.79999999999995" y="138.98050974512745"/>
         </scene>
         <!--Two View Controller-->
         <scene sceneID="JZ8-Yy-we0">
@@ -176,7 +244,21 @@
                     <view key="view" contentMode="scaleToFill" id="G5L-fR-Pa6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqx-m7-HBf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="iIr-kP-kvh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gqx-m7-HBf" firstAttribute="trailing" secondItem="CFO-sV-CZ4" secondAttribute="trailing" id="I7Z-QK-1eO"/>
+                            <constraint firstItem="gqx-m7-HBf" firstAttribute="leading" secondItem="CFO-sV-CZ4" secondAttribute="leading" id="YAz-Eh-Vne"/>
+                            <constraint firstItem="gqx-m7-HBf" firstAttribute="top" secondItem="G5L-fR-Pa6" secondAttribute="top" id="xwr-cf-t7y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CFO-sV-CZ4"/>
                     </view>
                 </viewController>
