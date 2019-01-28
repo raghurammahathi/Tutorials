@@ -55,10 +55,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
         return sortImages.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.collection {
-            let cell = collection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-           
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        
+        if collectionView == collection{
             let oneVC = storyboard?.instantiateViewController(withIdentifier: "OneViewController") as! OneViewController
             oneVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             let oneVcView = oneVC.view
@@ -70,7 +70,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
             let threeVC = storyboard?.instantiateViewController(withIdentifier: "ThreeViewController") as! ThreeViewController
             threeVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             let threeVCView = threeVC.view
-
+            
             let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
             fourVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             let fourVcView = fourVC.view
@@ -86,6 +86,16 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
             let viewsArray = [oneVcView, twoVCView, threeVCView, fourVcView, fiveVcView, sixVcView]
             
             cell.contentView.addSubview(viewsArray[indexPath.row]!)
+            
+            
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.collection {
+            let cell = collection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+           
+          
 
             return cell
         }

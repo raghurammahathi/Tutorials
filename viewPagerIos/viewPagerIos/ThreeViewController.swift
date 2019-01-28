@@ -16,7 +16,13 @@ class ThreeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let newView2 = UIView()
+        newView2.frame = CGRect(x: 0, y: 120, width: 100, height: 100)
+        newView2.backgroundColor = UIColor.black
+        view.addSubview(newView2)
+    }
     /*
     // MARK: - Navigation
 
