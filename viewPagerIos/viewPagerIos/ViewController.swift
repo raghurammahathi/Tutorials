@@ -9,6 +9,7 @@
 import UIKit
 
 var sortImages = ["form-icon.png","important.png","form-icon.png","form-icon.png","important.png","form-icon.png"]
+var namesArray = ["Raghu","Anand suthar","Raj kumar joshi", "laxmi","shruthi bhateja","Ramniwas suthar"]
 class ViewController: UIViewController {
 
   let cellId = "cellId"
@@ -33,6 +34,11 @@ class ViewController: UIViewController {
         tabBarCollection.backgroundColor = UIColor.init(red: 63/255, green: 79/255, blue: 181/255, alpha: 1)
         let selectedIndex = NSIndexPath(item: 0, section: 0)
         tabBarCollection.selectItem(at: selectedIndex as IndexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.right)
+        
+        tabBarCollection.register(UINib(nibName: "TabsCell", bundle: nil), forCellWithReuseIdentifier: "TabsCell")
+        if let flowLayout = tabBarCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
     }
 
 }
@@ -52,7 +58,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
         if collectionView == self.collection {
             return 6
         }
-        return sortImages.count
+        return namesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -94,17 +100,17 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collection {
             let cell = collection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-           
-          
 
             return cell
         }
         else {
-            if let IconsCell: IconsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconsCell", for: indexPath) as? IconsCell
+            if let tabsCell: TabsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabsCell", for: indexPath) as? TabsCell
             {
-                IconsCell.imgSortItems.image = UIImage(named: sortImages[indexPath.row])?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-                IconsCell.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
-                return IconsCell
+//                IconsCell.imgSortItems.image = UIImage(named: sortImages[indexPath.row])?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+//                IconsCell.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
+             
+             tabsCell.namesLbl.text = namesArray[indexPath.row]
+                return tabsCell
             }
             return UICollectionViewCell()
         }
