@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aNa-hG-CA8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6V7-ic-DCR">
+            <objects>
+                <viewController id="aNa-hG-CA8" customClass="ViewController" customModule="ViewPagerUsingPagingController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iBm-uL-1p7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K35-Jo-hws" customClass="MenuTabsView" customModule="ViewPagerUsingPagingController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qqJ-3o-xln"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K35-Jo-hws" firstAttribute="leading" secondItem="FF8-1v-A2S" secondAttribute="leading" id="ZNw-Ze-e5K"/>
+                            <constraint firstItem="K35-Jo-hws" firstAttribute="top" secondItem="FF8-1v-A2S" secondAttribute="top" id="vux-KL-Q4h"/>
+                            <constraint firstItem="FF8-1v-A2S" firstAttribute="trailing" secondItem="K35-Jo-hws" secondAttribute="trailing" id="yrq-4L-av5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FF8-1v-A2S"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuBarView" destination="K35-Jo-hws" id="0d2-KJ-HS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLz-25-Jl4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Page ControllerVC-->
+        <scene sceneID="Ybe-8z-z5T">
+            <objects>
+                <pageViewController storyboardIdentifier="PageControllerVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Iyq-Nv-0MZ" customClass="PageControllerVC" customModule="ViewPagerUsingPagingController" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnr-vS-0cZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="127"/>
+        </scene>
+        <!--ContentVC-->
+        <scene sceneID="NkE-Tk-Zwg">
+            <objects>
+                <viewController storyboardIdentifier="ContentVC" id="455-5B-KeG" customClass="ContentVC" customModule="ViewPagerUsingPagingController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eu4-Jl-1sj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NU5-bL-WTT">
+                                <rect key="frame" x="5" y="320" width="365" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="o8Y-Ed-qPd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40896445079999999" green="0.83972348939999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vcl-lM-nac" firstAttribute="trailing" secondItem="NU5-bL-WTT" secondAttribute="trailing" constant="5" id="SfS-PE-LwZ"/>
+                            <constraint firstItem="NU5-bL-WTT" firstAttribute="top" secondItem="vcl-lM-nac" secondAttribute="top" constant="300" id="dHs-nL-0NT"/>
+                            <constraint firstItem="NU5-bL-WTT" firstAttribute="leading" secondItem="vcl-lM-nac" secondAttribute="leading" constant="5" id="sjG-dM-Tg5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vcl-lM-nac"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="NU5-bL-WTT" id="ohH-dc-Goq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bt8-vd-8wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="119"/>
+        </scene>
+    </scenes>
+</document>
