@@ -8,7 +8,7 @@
 
 import UIKit
 
-var sortImages = ["form-icon.png","important.png","form-icon.png","form-icon.png","important.png","form-icon.png"]
+//var sortImages = ["form-icon.png","important.png","form-icon.png","form-icon.png","important.png","form-icon.png"]
 var namesArray = ["Raghu","Anand suthar","Raj kumar joshi", "laxmi","shruthi bhateja","Ramniwas suthar"]
 
 class ViewController: UIViewController {
@@ -17,10 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var tabBarCollection: UICollectionView!
-    @IBOutlet weak var barLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var barView: UIView!
-    
-    override func viewDidLoad() {
+ 
+        override func viewDidLoad() {
         super.viewDidLoad()
          setUpCollection()
          setUpTabBarCollection()
@@ -39,47 +37,46 @@ class ViewController: UIViewController {
 
 }
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.x)
-        
-        barLeftConstraint.constant = scrollView.contentOffset.x/6
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print(scrollView.contentOffset.x)
+//       // barLeftConstraint.constant = scrollView.contentOffset.x/6
+//    }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.pointee.x/view.frame.width
         let indexPath = NSIndexPath(item: Int(index), section: 0)
-        tabBarCollection.selectItem(at: indexPath as IndexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.right)
+        tabBarCollection.scrollToItem(at: indexPath as IndexPath, at: UICollectionView.ScrollPosition.right, animated: false)
+        tabBarCollection.selectItem(at: indexPath as IndexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return namesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionView == self.collection{
         let oneVC = storyboard?.instantiateViewController(withIdentifier: "OneViewController") as! OneViewController
-        oneVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        oneVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
         let oneVcView = oneVC.view
         
         let twoVC = storyboard?.instantiateViewController(withIdentifier: "TwoViewController") as! TwoViewController
-        twoVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        twoVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
         let twoVCView = twoVC.view
         
         let threeVC = storyboard?.instantiateViewController(withIdentifier: "ThreeViewController") as! ThreeViewController
-        threeVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        threeVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
         let threeVCView = threeVC.view
         
         let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
-        fourVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        fourVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
         let fourVcView = fourVC.view
         
         let fiveVC = storyboard?.instantiateViewController(withIdentifier: "FiveViewController") as! FiveViewController
-        fiveVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        fiveVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
         let fiveVcView = fiveVC.view
         
         let sixVC = storyboard?.instantiateViewController(withIdentifier: "SixViewController") as! SixViewController
-        sixVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        sixVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
         let sixVcView = sixVC.view
         
         let viewsArray = [oneVcView, twoVCView, threeVCView, fourVcView, fiveVcView, sixVcView]
@@ -101,6 +98,12 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
 //                iconsCell.imgSortItems.image = UIImage(named: sortImages[indexPath.row])?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
 //                iconsCell.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
                 iconsCell.namesLbl.text = namesArray[indexPath.row]
+                
+                if indexPath.row == 0{
+                    iconsCell.barView.isHidden = false
+                }else{
+                iconsCell.barView.isHidden = true
+                }
                 return iconsCell
             }
             return UICollectionViewCell()
@@ -123,10 +126,19 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == tabBarCollection{
             print(indexPath.item)
-            let x = CGFloat(indexPath.item) * view.frame.width/6
-            barLeftConstraint.constant = x
+//            let x = CGFloat(indexPath.item) * view.frame.width/6
+//            barLeftConstraint.constant = x
             scrolltoMenuIndex(menuIndex: indexPath.item)
+            tabBarCollection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
         }
+    }
+    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == tabBarCollection{
+            return 20
+        }
+        return 0
     }
     
     func scrolltoMenuIndex(menuIndex: Int){
@@ -139,15 +151,20 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
 class IconsCell: UICollectionViewCell {
     @IBOutlet weak var imgSortItems: UIImageView!
     
+    @IBOutlet weak var barView: UIView!
     @IBOutlet weak var namesLbl: UILabel!
+    
+    
     override var isSelected: Bool {
         didSet{
             
             if isSelected == true {
                 namesLbl.textColor = UIColor.white
+                barView.isHidden = false
                 //imgSortItems.tintColor = UIColor.white
             } else {
                 namesLbl.textColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
+                barView.isHidden = true
                 //imgSortItems.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
             }
 
