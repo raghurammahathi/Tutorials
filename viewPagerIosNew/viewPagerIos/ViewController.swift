@@ -18,13 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var tabBarCollection: UICollectionView!
  
-        override func viewDidLoad() {
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
+    override func viewDidLoad() {
         super.viewDidLoad()
          setUpCollection()
          setUpTabBarCollection()
     }
 
     func setUpCollection (){
+    
         collection.backgroundColor = UIColor.blue
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collection.isPagingEnabled = true
@@ -42,6 +44,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
 //       // barLeftConstraint.constant = scrollView.contentOffset.x/6
 //    }
     
+    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.pointee.x/view.frame.width
         let indexPath = NSIndexPath(item: Int(index), section: 0)
@@ -55,35 +58,71 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionView == self.collection{
-        let oneVC = storyboard?.instantiateViewController(withIdentifier: "OneViewController") as! OneViewController
-        oneVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
-        let oneVcView = oneVC.view
+            if indexPath == [0, 0]{
+                let oneVC = storyboard?.instantiateViewController(withIdentifier: "OneViewController") as! OneViewController
+                oneVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                let oneVcView = oneVC.view
+                cell.contentView.addSubview(oneVcView!)
+            }
+            
+            if collectionView == self.collection{
+                if indexPath == [0, 1]{
+                    let twoVC = storyboard?.instantiateViewController(withIdentifier: "TwoViewController") as! TwoViewController
+                    twoVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    let twoVCView = twoVC.view
+                    cell.contentView.addSubview(twoVCView!)
+                }
         
-        let twoVC = storyboard?.instantiateViewController(withIdentifier: "TwoViewController") as! TwoViewController
-        twoVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
-        let twoVCView = twoVC.view
+            }
         
-        let threeVC = storyboard?.instantiateViewController(withIdentifier: "ThreeViewController") as! ThreeViewController
-        threeVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
-        let threeVCView = threeVC.view
-        
-        let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
-        fourVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
-        let fourVcView = fourVC.view
-        
-        let fiveVC = storyboard?.instantiateViewController(withIdentifier: "FiveViewController") as! FiveViewController
-        fiveVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
-        let fiveVcView = fiveVC.view
-        
-        let sixVC = storyboard?.instantiateViewController(withIdentifier: "SixViewController") as! SixViewController
-        sixVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
-        let sixVcView = sixVC.view
-        
-        let viewsArray = [oneVcView, twoVCView, threeVCView, fourVcView, fiveVcView, sixVcView]
-        
-        cell.contentView.addSubview(viewsArray[indexPath.row]!)
+            if collectionView == self.collection{
+                if indexPath == [0, 2]{
+                    let threeVC = storyboard?.instantiateViewController(withIdentifier: "ThreeViewController") as! ThreeViewController
+                    threeVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    let threeVCView = threeVC.view
+                    cell.contentView.addSubview(threeVCView!)
+                }
+                
+            }
+       
+
+            if collectionView == self.collection{
+                if indexPath == [0, 3]{
+                    let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
+                    fourVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    let fourVcView = fourVC.view
+                    cell.contentView.addSubview(fourVcView!)
+                }
+                
+            }
+            
+            if collectionView == self.collection{
+                if indexPath == [0, 4]{
+                    let fiveVC = storyboard?.instantiateViewController(withIdentifier: "FiveViewController") as! FiveViewController
+                    fiveVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    let fiveVcView = fiveVC.view
+                    cell.contentView.addSubview(fiveVcView!)
+                }
+                
+            }
+
+            if collectionView == self.collection{
+                if indexPath == [0, 5]{
+                    let sixVC = storyboard?.instantiateViewController(withIdentifier: "SixViewController") as! SixViewController
+                    sixVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    let sixVcView = sixVC.view
+                    cell.contentView.addSubview(sixVcView!)
+                }
+                
+            }
+
+//        let viewsArray = [oneVcView, twoVCView, threeVCView, fourVcView, fiveVcView, sixVcView]
+//        cell.contentView.addSubview(viewsArray[indexPath.row]!)
         }
     }
+    
+
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collection {

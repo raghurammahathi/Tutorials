@@ -8,10 +8,28 @@
 
 import UIKit
 
-class OneViewController: UIViewController {
+class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "cell")
+        return cell!
+    }
+    
+    
+    
+    
+    
 
+    @IBOutlet weak var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
       //  view.backgroundColor = UIColor.orange
         
 //        let newView = UIView()
@@ -23,6 +41,9 @@ class OneViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        
+       
+        //table.reloadData()
 //        let newView2 = UIView()
 //        newView2.frame = CGRect(x: 0, y: 100, width: 100, height: 100)
 //        newView2.backgroundColor = UIColor.black
