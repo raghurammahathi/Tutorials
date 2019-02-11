@@ -1,0 +1,6 @@
+framework module Pods_RTLUsingMOHL {
+  umbrella header "Pods-RTLUsingMOHL-umbrella.h"
+
+  export *
+  module * { export * }
+}

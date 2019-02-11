@@ -1,0 +1,24 @@
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "15M-HT-6di"; */
+"15M-HT-6di.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Hello"; ObjectID = "7JH-DN-5uU"; */
+"7JH-DN-5uU.placeholder" = "Hello";
+
+/* Class = "UILabel"; text = "Hello"; ObjectID = "ABA-rM-DWZ"; */
+"ABA-rM-DWZ.text" = "Hello";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JWZ-8k-z8J"; */
+"JWZ-8k-z8J.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Pz5-2F-G4c"; */
+"Pz5-2F-G4c.title" = "Item";
+
+/* Class = "UITextView"; text = "hello this text is just to test whether the text view is working or not"; ObjectID = "YP7-8X-OdJ"; */
+"YP7-8X-OdJ.text" = "hello this text is just to test whether the text view is working or not";
+
+/* Class = "UILabel"; text = "Hello"; ObjectID = "dlm-yL-ABL"; */
+"dlm-yL-ABL.text" = "Hello";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "vQm-u2-Vzy"; */
+"vQm-u2-Vzy.title" = "Item";
