@@ -10,5 +10,11 @@ import Foundation
 
 class Block: Decodable {
     let id: String?
-    let block_name: String?
+    let blockName: String?
+    //let block_name: String?
+    
+    private enum CodingKeys : String, CodingKey {
+        case id, blockName = "block_name"
+    }
+    
 }

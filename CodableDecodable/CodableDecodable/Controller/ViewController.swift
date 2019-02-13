@@ -43,7 +43,7 @@ class BlockCell: UITableViewCell {
     var block:Block?{
         didSet {
             if let object = block {
-                self.lblBlock.text = object.block_name
+                self.lblBlock.text = object.blockName
                 self.lblId.text = object.id
                 
             }
