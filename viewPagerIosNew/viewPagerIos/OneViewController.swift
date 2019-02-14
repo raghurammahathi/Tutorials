@@ -8,14 +8,19 @@
 
 import UIKit
 
+var arr = ["ikuhdfglegn", "kfghlieu", "juhsgikug", "kajsughei;gj", "jkfgreilru"]
+
 class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cell")
-        return cell!
+        let cell = table.dequeueReusableCell(withIdentifier: "Cell") as! Cell
+        cell.lbl.text = arr[indexPath.row]
+        return cell
     }
     
     
@@ -29,7 +34,6 @@ class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         
         
-        
       //  view.backgroundColor = UIColor.orange
         
 //        let newView = UIView()
@@ -40,7 +44,6 @@ class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         
        
         //table.reloadData()
@@ -59,4 +62,12 @@ class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     */
 
+}
+
+
+class Cell: UITableViewCell {
+    
+
+    @IBOutlet weak var lbl: UILabel!
+    
 }
