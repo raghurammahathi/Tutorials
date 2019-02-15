@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         
         self.pageController = storyboard?.instantiateViewController(withIdentifier: "PageControllerVC") as! PageControllerVC
         self.pageController.view.frame = CGRect.init(x: 0, y: menuBarView.frame.maxY, width: self.view.frame.width, height: self.view.frame.height - menuBarView.frame.maxY)
+        
         self.addChild(self.pageController)
         self.view.addSubview(self.pageController.view)
         self.pageController.didMove(toParent: self)

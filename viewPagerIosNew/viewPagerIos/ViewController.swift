@@ -61,16 +61,21 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
             if indexPath == [0, 0]{
                 let oneVC = storyboard?.instantiateViewController(withIdentifier: "OneViewController") as! OneViewController
                 oneVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                self.addChild(oneVC)
                 let oneVcView = oneVC.view
                 cell.contentView.addSubview(oneVcView!)
+                oneVC.didMove(toParent: self)
             }
             
             if collectionView == self.collection{
                 if indexPath == [0, 1]{
                     let twoVC = storyboard?.instantiateViewController(withIdentifier: "TwoViewController") as! TwoViewController
                     twoVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    self.addChild(twoVC)
                     let twoVCView = twoVC.view
                     cell.contentView.addSubview(twoVCView!)
+                    twoVC.didMove(toParent: self)
+
                 }
         
             }
@@ -79,8 +84,11 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                 if indexPath == [0, 2]{
                     let threeVC = storyboard?.instantiateViewController(withIdentifier: "ThreeViewController") as! ThreeViewController
                     threeVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    self.addChild(threeVC)
                     let threeVCView = threeVC.view
                     cell.contentView.addSubview(threeVCView!)
+                    threeVC.didMove(toParent: self)
+
                 }
                 
             }
@@ -90,8 +98,11 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                 if indexPath == [0, 3]{
                     let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
                     fourVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    self.addChild(fourVC)
                     let fourVcView = fourVC.view
                     cell.contentView.addSubview(fourVcView!)
+                    fourVC.didMove(toParent: self)
+
                 }
                 
             }
@@ -100,8 +111,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                 if indexPath == [0, 4]{
                     let fiveVC = storyboard?.instantiateViewController(withIdentifier: "FiveViewController") as! FiveViewController
                     fiveVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    self.addChild(fiveVC)
                     let fiveVcView = fiveVC.view
                     cell.contentView.addSubview(fiveVcView!)
+                    fiveVC.didMove(toParent: self)
                 }
                 
             }
@@ -110,8 +123,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                 if indexPath == [0, 5]{
                     let sixVC = storyboard?.instantiateViewController(withIdentifier: "SixViewController") as! SixViewController
                     sixVC.view.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height-50)
+                    self.addChild(sixVC)
                     let sixVcView = sixVC.view
                     cell.contentView.addSubview(sixVcView!)
+                    sixVC.didMove(toParent: self)
                 }
                 
             }
