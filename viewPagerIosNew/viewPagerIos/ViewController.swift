@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var tabBarCollection: UICollectionView!
- 
     @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,6 @@ class ViewController: UIViewController {
     }
 
     func setUpCollection (){
-    
         collection.backgroundColor = UIColor.blue
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collection.isPagingEnabled = true
@@ -36,14 +34,12 @@ class ViewController: UIViewController {
         let selectedIndex = NSIndexPath(item: 0, section: 0)
         tabBarCollection.selectItem(at: selectedIndex as IndexPath, animated: false, scrollPosition: UICollectionView.ScrollPosition.right)
     }
-
 }
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        print(scrollView.contentOffset.x)
 //       // barLeftConstraint.constant = scrollView.contentOffset.x/6
 //    }
-    
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.pointee.x/view.frame.width
@@ -75,9 +71,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                     let twoVCView = twoVC.view
                     cell.contentView.addSubview(twoVCView!)
                     twoVC.didMove(toParent: self)
-
                 }
-        
             }
         
             if collectionView == self.collection{
@@ -88,12 +82,9 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                     let threeVCView = threeVC.view
                     cell.contentView.addSubview(threeVCView!)
                     threeVC.didMove(toParent: self)
-
                 }
-                
             }
        
-
             if collectionView == self.collection{
                 if indexPath == [0, 3]{
                     let fourVC = storyboard?.instantiateViewController(withIdentifier: "FourViewController") as! FourViewController
@@ -102,9 +93,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                     let fourVcView = fourVC.view
                     cell.contentView.addSubview(fourVcView!)
                     fourVC.didMove(toParent: self)
-
                 }
-                
             }
             
             if collectionView == self.collection{
@@ -116,7 +105,6 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                     cell.contentView.addSubview(fiveVcView!)
                     fiveVC.didMove(toParent: self)
                 }
-                
             }
 
             if collectionView == self.collection{
@@ -128,22 +116,13 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
                     cell.contentView.addSubview(sixVcView!)
                     sixVC.didMove(toParent: self)
                 }
-                
             }
-
-//        let viewsArray = [oneVcView, twoVCView, threeVCView, fourVcView, fiveVcView, sixVcView]
-//        cell.contentView.addSubview(viewsArray[indexPath.row]!)
         }
     }
-    
 
-    
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collection {
             let cell = collection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-           
-            
             return cell
         }
         else {
@@ -186,7 +165,6 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
             tabBarCollection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
         }
     }
-    
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == tabBarCollection{
@@ -204,10 +182,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource, U
 
 class IconsCell: UICollectionViewCell {
     @IBOutlet weak var imgSortItems: UIImageView!
-    
     @IBOutlet weak var barView: UIView!
     @IBOutlet weak var namesLbl: UILabel!
-    
     
     override var isSelected: Bool {
         didSet{
@@ -221,7 +197,6 @@ class IconsCell: UICollectionViewCell {
                 barView.isHidden = true
                 //imgSortItems.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
             }
-
         }
     }
 }
