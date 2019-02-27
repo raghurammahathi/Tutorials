@@ -1,0 +1,413 @@
+/*
+  Localizable.strings
+  Drewel
+
+  Created by Octal on 27/03/18.
+  Copyright © 2018 Octal. All rights reserved.
+*/
+"English_Title"                 = "English";
+"OMR"                           = "OMR";
+
+"Done_Title"                    = "Done";
+"submit_title"                  = "Submit";
+"OK_Title"                      = "OK";
+"Confirm_Title"                 = "Confirm";
+"Accept"                        = "Accept";
+"Verify_Title"                  = "Verify";
+
+"Cancel_Title"                  = "Cancel";
+"Reject_Title"                  = "Reject";
+"Retry_Title"                   = "Retry";
+
+"Call_Title"                    = "Call";
+"Continue_Title"                = "Continue";
+"save_title"                    = "Save";
+
+
+//FirstVC
+
+"Register"                  = "Register";
+"Login"                     = "Login";
+"ContinuewithFacebook"      = "Continue with Facebook";
+"English"                   = "English";
+"Arabic"                    = "عربي";
+
+// LoginVC
+
+"emailAddress"              = "Email Address";
+"password"                  = "Password";
+"dontHaveAccount"           = "Don't have an account";
+"signup"                    = "Sign up";
+"forgotPassword"            = "Forgot Password";
+
+// SignupVC
+
+"alreadyHaveAccount"        = "Already have an account";
+"firstName"                 = "First Name";
+"lastName"                  = "Last Name";
+"phoneNumber"               = "Phone Number";
+"confirmPassword"           = "Confirm Password";
+
+// VerifyOtoVC
+
+"enterOtp"                  = "Enter OTP";
+"resendOtp"                 = "Resend OTP";
+"enterOtpMsg"               = "Enter the OTP below to verify your Mobile number";
+"seconds"                   = "seconds";
+"resendIn"                  = "Resend in";
+
+// HomeVC
+"selectAddress"             = "Select Address";
+"allProduct"                = "All Products";
+"allProductFromStore"       = "All products from this store";
+"searchProducts"            = "Search Products";
+
+// OffersVC
+"expiresOn"                 = "Expires On";
+"offers"                    = "Offers";
+"search"                    = "Search";
+
+// ProductDetailsVC
+"addToCart"                 = "Add to Cart";
+"addToWishList"             = "Add to Wishlist";
+"removeFromWishList"        = "Added to Wishlist";
+"addToFavList"              = "Add to Favourite";
+"removeFromFavList"         = "Added to Favourite";
+"weight"                    = "Weight";
+"brand"                     = "Brand";
+"similarProducts"           = "Similar Products";
+"notifyMe"                  = "Notify Me";
+"outOfStock"                = "Out Of Stock";
+
+"checkThisOut"              = "Check this out";
+
+// WishlistVC
+"moveToCart"                = "Move To Cart";
+"myWishList"                = "My Wish List";
+"myFavouriteList"           = "My Favourites";
+
+// CartVC
+"myCart"                    = "My Cart";
+"totalPrice"                = "Total Price";
+"proceedCheckout"           = "Proceed to Checkout";
+"continueShopping"          = "Continue Shopping";
+"items"                     = "Items";
+
+//FilterProductVC
+"brandName"                 = "Brand Name";
+"priceRange"                = "Price Range";
+"starRating"                = "Star Rating";
+"apply"                     = "Apply";
+"remove"                    = "Remove";
+"clearAll"                  = "Clear All";
+
+
+// MoreVC
+"settings"                  = "Settings";
+"notificationSettings"      = "Notification Settings";
+"notification"              = "Notifications";
+"wallet"                    = "Wallet";
+"Wallet"                    = "Wallet";
+"deliveryAddress"           = "Delivery Address";
+"changeLanguage"            = "Change Language";
+"changePassword"            = "Change Password";
+"aboutApp"                  = "About App";
+"contactUs"                 = "Contact Us";
+"signOut"                   = "Sign Out";
+
+"selectLanguage"            = "Select Language";//
+
+// SearchAddress
+"selectYourLocation"        = "Select Your Location";//
+"selectYourAddress"         = "Select Your Address";//
+"searchBuildingName"        = "Search Building Name / Villa / Area";
+"enterAddressOrSetPin"      = "Please enter your address or move pin";
+
+
+// MyOrdersVC
+
+"NO_ORDER_MESSAGE1"         = "You don't have any orders\n in history.";
+"NO_ORDER_MESSAGE2"         = "Complete at least one order to see\n it there.";
+
+// RequestListVC
+"requests"                  = "Requests";
+"request"                   = "Request";
+"notFindingProduct"         = "Not Finding Your Favourite Products?";
+"typeProductToArange"       = "Type in each product not offered in our store and we will try to include it in the future";
+"enterProductName"          = "Enter the product name";
+
+
+//ChangePasswordVC
+"newPassword"               = "New Password";
+"oldPassword"               = "Old Password";
+
+//ProfileVC
+
+"myProfile"                 = "My Profile";
+"camera"                    = "Camera";
+"selectExisting"            = "Photo Library";
+
+//AboutUsVC
+"howItWork"                 = "How it Works";
+"termOfUse"                 = "Terms of use";
+"privacyPolicy"             = "Privacy & Policy";
+"faq"                       = "FAQ";
+"appVersion"                = "App Version";
+
+// AddressDetailsVC
+"deliveryDetails"           = "Delivery Details";
+"contactInformation"        = "CONTACT INFORMATION";
+"deliveryAddressCaps"       = "DELIVERY ADDRESS";
+"name"                      = "Name";
+//"phoneNumber"
+"apartmentNo"               = "Apartment No";
+"floor"                     = "Floor";
+"building"                  = "Building";
+"street"                    = "Street";
+"additionalDirections"      = "Additional Information";
+
+//OrderSummeryVC
+"orderSummery"              = "Order Summary";
+"addDetails"                = "Select Delivery Slot";
+"chooseDeliveryType"        = "Select Delivery Time Slot";
+"addLoyaltyPoint"           = "Add Loyalty Balance";
+"addCouponCode"             = "Add Coupon Code";
+"choosePaymentDetails"      = "Choose Payment Details";
+"cash"                      = "Cash on delivery";
+"creditCard"                = "Credit Card";
+"totalItems"                = "Total Items";
+"quantity"                  = "Quantity";
+"paymentSummary"            = "Payment Summary";
+"subTotal"                  = "Sub Total";
+"discount"                  = "Discount";
+"deliveryCharges"           = "Delivery Charges";
+"grandTotal"                = "Grand Total";
+"confirmOrder"              = "Confirm Order";
+
+"deliverNow"                = "Deliver Now";
+"sameDayDelivery"           = "Same Day Delivery";
+"nextDayDelivery"           = "Next Day Delivery";
+
+// OrderHistoryVC
+"myOrder"                   = "My Orders";
+"orderId"                   = "ORDER ID";
+"to"                        = "To";
+"currentOrder"              = "CURRENT ORDER";
+"completOrder"              = "PREVIOUS ORDER";
+"date"                      = "DATE";
+"time"                      = "TIME";
+"noOfItems"                 = "NO OF ITEMS";
+"orderAmount"               = "ORDER AMOUNT";
+"paymentMethod"             = "PAYMENT METHOD";
+"orderStatus"               = "ORDER STATUS";
+
+// OrderDetailsVC
+"orderDetails"              = "Order Details";
+"cancelOrder"               = "CANCEL ORDER";
+"trackOrder"                = "TRACK ORDER";
+"productList"               = "PRODUCT LIST";
+"deliveryTime"              = "DELIVERY TIME";
+"paymentInfo"               = "PAYMENT INFORMATION";
+"price"                     = "Price";
+"deliveryFee"               = "Delivery Fee";
+"totalAmount"               = "Total Amount";
+"deliveryBoyInfo"           = "Delivery boy information";
+"reorder"                   = "Reorder";
+"offerValidBy"              = "Offer valid by";
+
+// Order Status
+"Delivered"                 = "Delivered";
+
+// LoyaltyPointsListVC
+"loyaltyPoints"             = "Loyalty Balance";
+"transactions"              = "Transactions";
+"from"                      = "From";
+"order"                     = "Order";
+"earned"                    = "Loyalty Balance Earned";
+"redeemed"                  = "Loyalty Balance Redeemed";
+"transfered"                = "Loyalty Balance Transfered";
+"reply"                     = "Reply";
+
+//TransferLoyaltyPointsVC
+"transferLoyaltyPoints"     = "Transfer Loyalty Balance";
+
+"addReview"                 = "Add Review";
+
+// App Validation Messages
+"NAME_LENGTH"                   = "Please enter name.";
+"FNAME_LENGTH"                  = "Please enter first name.";
+"LNAME_LENGTH"                  = "Please enter last name.";
+"MOBILE_LENGTH"                 = "Please enter mobile number.";
+"MOBILE_VALID"                  = "Please enter valid mobile number.";
+"EMAIL_LENGTH"                  = "Please enter email address.";
+"EMAIL_VALID"                   = "Please enter a valid email address.";
+"PASS_ENTER"                    = "Please enter password.";
+"Old_PASS_ENTER"                = "Please enter old password.";
+"PASS_VALID"                    = "Password should be atleast of 6 characters and alphanumeric.";
+"NEW_PASS_VALID"                = "New Password should be atleast of 6 characters and alphanumeric.";
+"RE_PASS_ENTER"                 = "Please enter confirm password.";
+"REPASS_VALID"                  = "Password and Confirm Password does not match.";
+
+"APARTMENT_LENGTH"              = "Please enter apartment no.";
+"FLOOR_LENGTH"                  = "Please enter floor.";
+"BUILDING_LENGTH"               = "Please enter building name.";
+"STREET_LENGTH"                 = "Please enter street.";
+"LOYALTY_POINTS_LENGTH"         = "Please enter loyalty balance.";
+
+"PRODUCT_NAME_LENGTH"           = "Please enter product name.";
+
+"ADD_ADDRESS_MESSAGE"           = "Please add an address to continue.";
+
+"OTP_LENGTH"                    = "Please enter OTP.";
+"VALID_OTP"                     = "Please enter valid OTP.";
+
+"MESSAGE_LOGOUT"                = "Are you sure you want to logout?";
+
+"Already_In_Wishlist"           = "This product is already in your favourite.";
+
+"Notifications_On"              = "Are you sure you want to trun on notifications?";
+"Notifications_Off"             = "Are you sure you want to trun off notifications?";
+"Order_Cancel_MSG"              = "Are you sure you want to cancel this order?";
+"Order_Reorder_MSG"             = "Are you sure you want to reorder this same order?";
+
+"Remove_Promo_MSG"              = "Are you sure you want to remove this coupon code?";
+
+"MSG_Coupon_Already_Used"       = "This coupon code is already used.";
+"MSG_Select_Delivery_Type"      = "Please select delivery time slot.";
+
+"CouponCopied"                  = "Coupon copied to pasteboard.";
+"Remove_Outofstock"             = "Please remove out of stock items from your cart.";
+// New
+
+"MSG_Add_Review"                = "Please add your review to submit.";
+"MSG_Add_Rating"                = "Please add rating to submit.";
+"VILLA_LENGTH"                  = "Please enter villa no.";
+"OFFICE_LENGTH"                 = "Please enter office no.";
+
+"chooseTimeSlot"                = "Select Time Slot";
+"today"                         = "Today";
+
+
+
+
+
+"writeReviews"                  = "Write/View Reviews";
+"cartEmpty"                     = "Your cart is empty";
+"FavouriteListEmpty"            = "Your favourite list is empty";
+"rateUs"                        = "Rate Us";
+"home"                          = "Home";
+"house"                         = "House";
+
+"more"                          = "More";
+"addMoney"                      = "Add Money";
+"balance"                       = "Balance";
+"amount"                        = "Amount";
+"havePromocode"                 = "Have a Promocode?";
+
+
+//Even New
+"callUs"                        = "Call";
+"mailUs"                        = "Send An Email";
+"chatUs"                        = "Live Chat";
+
+"wayNo"                         = "Way No";
+
+"edit"                          = "Edit";
+"verify"                        = "Verify";
+"verified"                      = "Verified";
+"MOBILE_NOT_VERIFIED"           = "Please verify mobile number to submit changes.";
+"Order_Edit_MSG"                = "Once you edit the order, your order remains pending until you submit the final order.";
+
+"houseNo"                       = "House No";
+"officeNo"                      = "Office No";
+"apartment"                     = "Apartment";
+"office"                        = "Office";
+
+"trnxId"                        = "TRANSACTION ID";
+"addedToWallet"                 = "OMR will be added to your Wallet";
+
+"cantFindLocation"              = "Can't find location?";
+"switchToMap"                   = "Switch to Map view";
+
+"BookSlot"                      = "Book Delivery Time Slot";
+"AvailableSlots"                = "Available Delivery Slots";
+
+"ORDER_DELETE_MSG"              = "Are you sure you want to delete this order";
+"Previous_ORDER_DELETE_MSG"     = "Are you sure you wants to delete the record of this order";
+"Choose_slot_MSG"               = "Please select any other delivery slot as the selected delivery slot is not available.";
+"Mobile_Number_Edit_MSG"        = "Your number is verified, please submit to save changes in profile.";
+
+//Even New
+"NOTIFICATION_DELETE_MSG"       = "Are you sure you want to delete this notification.";
+"ALL_NOTIFICATION_DELETE_MSG"   = "Are you sure you want to delete all notifications.";
+"loyaltyPoint"                  = "Loyalty Balance";// Done
+"couponCode"                    = "Coupon Code";
+"change"                        = "Change";
+"Na"                            = "N/A";
+
+"jsonError"                     = "The data couldn’t be read because it isn’t in the correct format.";
+"failError"                     = "Oops!! request time out, please try again.";
+"unknownError"                  = "Request failed with unknown error, please try again.";
+
+"Kg"                            = "Kg";
+"Gm"                            = "Gm";
+"Lt"                            = "Ltr";
+"Ml"                            = "ml";
+"Cancelled"                     = "Cancelled";
+"Not Cancelled"                 = "Not Cancelled";
+"Pending"                       = "Pending";
+"Under Packaging"               = "Under Packaging";
+"Ready To Deliver"              = "Ready To Deliver";
+"COD"                           = "Cash on delivery";
+
+"alreadyPaid"                   = "Already paid";
+"deleteDefaultAddressMSG"       = "You can't delete default address.";
+"delete_Address_MSG"            = "Are you sure you want to delete this delivery address?";
+"Delete_Product_Request_MSG"    = "Are you sure you want to delete this product request?";
+"Add_Address_MSG"               = "Are you sure you want to add this place as your delivery address?";
+
+"nearybyLandmark"               = "Nearby Landmark";
+"similarOldNNewPass"            = "Old password and new password cannot be same.";
+
+"yes"                           = "Yes";
+"no"                            = "No";
+
+"ALL_ORDER_DELETE_MSG"          = "Are you sure you want to delete the records of all previous orders.";
+"fromOrder"                     = "From order : #";
+"paidForOrder"                  = "Paid for order : #";
+"alreadyRated"                  = "You have already submitted review for this product.";
+
+"addRequest"                    = "Add";
+"tryAgain"                      = "Try Again";
+"Loyalty_DELETE_MSG"            = "Are you sure you want to delete Loyalty balance history.";
+"Wallet_DELETE_MSG"             = "Are you sure you want to delete this Wallet transaction history.";
+"redeem"                        = "Redeem";
+
+"pullToRefresh"                 = "Pull to refresh";
+"MSG_minimum_order"             = "Minimum order value must be 5.000 OMR";
+"delete"                        = "Delete";
+"addAddress"                    = "Add Address";
+"addAnotherAddress"             = "Add Another Address";
+"thankYou"                      = "Thank you";
+"Online"                        = "Credit Card";
+
+"submitReview"                  = "Submit Review";
+"writeComment"                  = "Write Comment";
+
+"No_Twitter_App_MSG"            = "Twitter application is not installed on your phone.";
+"transactionId"                 = "Transaction Id";
+
+"priceLH"                       = "Price Low-High";
+"priceHL"                       = "Price High-Low";
+"newAdded"                      = "Newly Added";
+"mostPopular"                   = "Most Popular Products";
+"discounted"                    = "Discounted Products";
+"reviews"                       = "Reviews";
+"coupon_redeemed"               = "Redeemed";
+"points"                        = "Points";
+
+"Delete_Chat_MSG"               = "Do you want to delete this message?";
+"chatSupport"                   = "Chat Support";
+"payment"                       = "Payment";
+"Payment_Failed_MSG"            = "Payment transaction failed, please try again.";
+"enter"                         = "Enter";

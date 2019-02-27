@@ -1,0 +1,413 @@
+/*
+ Localizable.strings
+ Drewel
+ 
+ Created by Octal on 27/03/18.
+ Copyright © 2018 Octal. All rights reserved.
+ */
+"English_Title"                 = "عربي";
+"OMR"                           = "ر.ع";
+
+"Done_Title"                    = "تم";
+"submit_title"                  = "ثبت";
+"OK_Title"                      = "حسنا";
+"Confirm_Title"                 = "تأكيد";
+"Accept"                        = "قبول";
+"Verify_Title"                  = "تحقق";
+
+"Cancel_Title"                  = "إلغاء";
+"Reject_Title"                  = "رفض";
+"Retry_Title"                   = "محاولة أخرى";
+
+"Call_Title"                    = "أتصل";
+"Continue_Title"                = "استمر	";
+"save_title"                    = "حفظ";
+
+
+//FirstVC
+
+"Register"                  = "التسجيل";
+"Login"                     = "تسجيل الدخول";
+"ContinuewithFacebook"      = "الإستمرار مع فيس بوك";
+"English"                   = "English";
+"Arabic"                    = "اللغة العربية";
+
+// LoginVC
+
+"emailAddress"              = "البريد الإلكتروني";
+"password"                  = "الرمز السري";
+"dontHaveAccount"           = "ليس لديك حساب؟";
+"signup"                    = "تسجيل حساب";
+"forgotPassword"            = "نسيت كلمة المرور";
+
+// SignupVC
+
+"alreadyHaveAccount"        = "لديك حساب من قبل ؟";
+"firstName"                 = "الأسم الأول";
+"lastName"                  = "القبيلة";
+"phoneNumber"               = "رقم الهاتف";
+"confirmPassword"           = "تأكيد  كلمة المرور";
+
+// VerifyOtoVC
+
+"enterOtp"                  = "إدخال رمز التحقق";
+"resendOtp"                 = "إعادة إرسال رمز التحقق";
+"enterOtpMsg"               = "أدخل رمز التحقق أسفل للتحقق من رقم هاتفك";
+"seconds"                   = "ثواني";
+"resendIn"                  = "إعادة إرسال رمز التحقق";
+
+// HomeVC
+"selectAddress"             = "عنوان توصيل الطلبات";
+"allProduct"                = "جميع المنتجات";
+"allProductFromStore"       = "جميع المنتجات من هذا المتجر";
+"searchProducts"            = "البحث عن المنتجات";
+
+// OffersVC
+"expiresOn"                 = "سوف ينتهي هذا العرض بتاريخ #";
+"offers"                    = "عروض";
+"search"                    = "بحث";
+
+// ProductDetailsVC
+"addToCart"                 = "أضف الى سلة التسوق";
+"addToWishList"             = "يضاف للقائمة المطلوبة";
+"removeFromWishList"        = "تمت الاضافة المطلوبة";
+"addToFavList"              = "اضف الى المفضلة";
+"removeFromFavList"         = "تم اضافته الي قائمة المفضله";
+"weight"                    = "الوزن";
+"brand"                     = "العلامة التجارية";
+"similarProducts"           = "منتجات مماثلة";
+"notifyMe"                  = "ارجو ابلاغي";
+"outOfStock"                = "غير متوفر";
+
+"checkThisOut"              = "التأكد من هذا";
+
+// WishlistVC
+"moveToCart"                = "الانتقال إلى السلة";
+"myWishList"                = "قائمتي المطلوبة";
+"myFavouriteList"           = "المفضلة";
+
+// CartVC
+"myCart"                    = "سلة التسوق";
+"totalPrice"                = "السعر الإجمالي";
+"proceedCheckout"           = "تنفيذ الطلب";
+"continueShopping"          = "مواصلة التسوق";
+"items"                     = "المنتجات";
+
+//FilterProductVC
+"brandName"                 = "اسم العلامة التجارية";
+"priceRange"                = "نطاق السعر";
+"starRating"                = "قم بتقيمنا";
+"apply"                     = "استخدم";
+"remove"                    = "إزالة";
+"clearAll"                  = "حذف الكل";
+
+
+// MoreVC
+"settings"                  = "الإعدادت";
+"notificationSettings"      = "إعدادت الإشعار";
+"notification"              = "الإشعارات";
+"wallet"                    = "المحفظة";
+"Wallet"                    = "المحفظة";
+"deliveryAddress"           = "عنوان توصيل الطلبات";
+"changeLanguage"            = "تغيير اللغة";
+"changePassword"            = "تغيير كلمة المرور";
+"aboutApp"                  = "حول التطبيق";
+"contactUs"                 = "تواصل معنا";
+"signOut"                   = "تسجيل الخروج";
+
+"selectLanguage"            = "إختار اللغة";
+
+// SearchAddress
+"selectYourLocation"        = "حدد موقعك";
+"selectYourAddress"         = "حدد عنوانك";
+"searchBuildingName"        = "البحث عن اسم المبنى / منطقة موقع الفيلا";
+"enterAddressOrSetPin"      = "يرجى ادخال العنوان أو حدد موقعك من الخريطة";
+
+
+// MyOrdersVC
+
+"NO_ORDER_MESSAGE1"         = "ليس لديك أي  طلبات أخرى";
+"NO_ORDER_MESSAGE2"         = "اكمل إجراءات طلب واحد على الأقل";
+
+// RequestListVC
+"requests"                  = "أطلب";
+"request"                   = "أطلب";
+"notFindingProduct"         = "لم تجد منتجك المفضل؟";
+"typeProductToArange"       = "اضف اي منتج غير متوفر حاليا في متجرنا و سوف نحاول توفيره مستقبلا";
+"enterProductName"          = "ادخل اسم المنتج";
+
+
+//ChangePasswordVC
+"newPassword"               = "كلمة المرور الجديدة";
+"oldPassword"               = "كلمة المرور القديمة";
+
+//ProfileVC
+
+"myProfile"                 = "ملفي الشخصي";
+"camera"                    = "الكاميرا";
+"selectExisting"            = "ألبوم الصور";
+
+//AboutUsVC
+"howItWork"                 = "كيفية عمل التطبيق";
+"termOfUse"                 = "الشروط و الأحكام";
+"privacyPolicy"             = "سياسة الخصوصية";
+"faq"                       = "اسئلة متكررة";
+"appVersion"                = "نسخة التطبيق";
+
+// AddressDetailsVC
+"deliveryDetails"           = "تفاصيل التوصيل";
+"contactInformation"        = "بيانات الإتصال";
+"deliveryAddressCaps"       = "عنوان توصيل الطلبات";
+"name"                      = "الإسم";
+//"phoneNumber"
+"apartmentNo"               = "رقم الشقة";
+"floor"                     = "الطابق";
+"building"                  = "المبنى";
+"street"                    = "الشارع";
+"additionalDirections"      = "معلومات اضافية عن العنوان";
+
+//OrderSummeryVC
+"orderSummery"              = "ملخص الطلب";
+"addDetails"                = "إضافة التفاصيل";
+"chooseDeliveryType"        = "أختر وقت التوصيل";
+"addLoyaltyPoint"           = "أضف نقطة الولاء";
+"addCouponCode"             = "أضف رمز القسيمة";
+"choosePaymentDetails"      = "إختر طريقة الدفع";
+"cash"                      = "الدفع عن الإستلام";
+"creditCard"                = "بطاقة الائتمان";
+"totalItems"                = "اجمالي المشتريات";
+"quantity"                  = "الكمية";
+"paymentSummary"            = "ملخص  الفاتوره";
+"subTotal"                  = "مبلغ المشتريات";
+"discount"                  = "العروض";
+"deliveryCharges"           = "رسوم التوصيل";
+"grandTotal"                = "المبلغ الإجمالي";
+"confirmOrder"              = "تأكيد الطلب";
+
+"deliverNow"                = "التوصيل الأن";
+"sameDayDelivery"           = "التوصيل في نفس اليوم";
+"nextDayDelivery"           = "التوصيل في اليوم التالي";
+
+// OrderHistoryVC
+"myOrder"                   = "طلباتي";
+"orderId"                   = "رقم الطلب";
+"to"                        = "إلى";
+"currentOrder"              = "الطلب الحالي";
+"completOrder"              = "الطلب السابق";
+"date"                      = "التاريخ";
+"time"                      = "الوقت";
+"noOfItems"                 = "عدد المنتجات";
+"orderAmount"               = "مبلغ الطلب";
+"paymentMethod"             = "طريقة الدفع";
+"orderStatus"               = "حالة الطلب";
+
+// OrderDetailsVC
+"orderDetails"              = "بيانات الطلب";
+"cancelOrder"               = "إلغاء الطلب";
+"trackOrder"                = "تتبع الطلب";
+"productList"               = "قائمة المنتجات";
+"deliveryTime"              = "وقت التوصيل";
+"paymentInfo"               = "بيانات الدفع";
+"price"                     = "السعر";
+"deliveryFee"               = "رسوم التوصيل";
+"totalAmount"               = "المبلغ الإجمالي";
+"deliveryBoyInfo"           = "معلومات عن الشخص الذي يقوم بالتوصيل";
+"reorder"                   = "إعادة الطلب";
+"offerValidBy"              = "لعرض صالح حتى";
+
+// Order Status
+"Delivered"                 = "تم التوصيل";
+
+// LoyaltyPointsListVC
+"loyaltyPoints"             = "نقاط الولاء";
+"transactions"              = "المعاملات";
+"from"                      = "من";
+"order"                     = "أطلب";
+"earned"                    = "نقاط الولاء المكتسبة";
+"redeemed"                  = "نقاط الولاء المستخدمة";
+"transfered"                = "تم تحويل نقاط الولاء";
+"reply"                     = "رد";
+
+//TransferLoyaltyPointsVC
+"transferLoyaltyPoints"     = "تحويل نقاط الولاء";
+
+"addReview"                 = "تقديم المراجعة";
+
+// App Validation Messages
+"NAME_LENGTH"                   = "أرجو إدخال إسمك";
+"FNAME_LENGTH"                  = "يرجى إدخال الأسم الأول";
+"LNAME_LENGTH"                  = "يرجى إدخال ألإسم الأخير";
+"MOBILE_LENGTH"                 = "يرجى إدخال رقم الهاتف";
+"MOBILE_VALID"                  = "الرجاء  إدخال رقم هاتف مفعل";
+"EMAIL_LENGTH"                  = "الرجاء إدخال  البريد الإلكتروني";
+"EMAIL_VALID"                   = "الرجاء إدخال بريد  إلكتروني مفعل";
+"PASS_ENTER"                    = "أدخل كلمة المرور";
+"Old_PASS_ENTER"                = "الرجاء ادخال كلمة المرور القديم";
+"PASS_VALID"                    = "كلمة المرور يجب أن لا تقل عن 6 خانات و حروف ";
+"NEW_PASS_VALID"                = "كلمة المرور يجب  ان تحتوي على حرف هيجائي واحد  ورمز  رقمي واحد على الأقل";
+"RE_PASS_ENTER"                 = "الرجاء ادخال تأكيد كلمة المرور";
+"REPASS_VALID"                  = "ال او تي بي غير مطابق";
+
+"APARTMENT_LENGTH"              = "أرجو إدخال رقم الشقة";
+"FLOOR_LENGTH"                  = "أرجو إدخال بيانات عن الطابق";
+"BUILDING_LENGTH"               = "أرجو إدخال بيانات المبنى";
+"STREET_LENGTH"                 = "الرجاء إدخال اسم الشارع";
+"LOYALTY_POINTS_LENGTH"         = "الرجاء إدخال  عدد نقاط الولاء";
+
+"PRODUCT_NAME_LENGTH"           = "الرجاء إدخال إسم المنتج";
+
+"ADD_ADDRESS_MESSAGE"           = "الرجاء إضافة عنوان التوصيل للأستمرار";
+
+"OTP_LENGTH"                    = "الرجاء إدخال ال او تي بي";
+"VALID_OTP"                     = "الرجاء إدخال رمز التحقق الصالح ";
+
+"MESSAGE_LOGOUT"                = "هل أنت متأكد برغبتك في تسجيل الخروج ؟";
+
+"Already_In_Wishlist"           = "هذا المنتج موجود أصلا بقائمة طلباتك";
+
+"Notifications_On"              = "هل أنت متأكد من إنك تريد تفعيل الإشعارات ؟";
+"Notifications_Off"             = "هل انت متاكد من رغبتك في إيقاف الاشعارات";
+"Order_Cancel_MSG"              = "هل أنت متأكد من أنك تريد إلغاء هذا الطلب ؟";
+"Order_Reorder_MSG"             = "هل أنت متأكد من أنك تريد إعادة طلب هذه الطلبية ؟";
+
+"Remove_Promo_MSG"              = "هل متأكد من رغبتك في ازالة رمز القسيمة ؟";
+
+"MSG_Coupon_Already_Used"       = "رقم القسيمة هذه سبق استخدامه";
+"MSG_Select_Delivery_Type"      = "الرجاء اختيار وقت التوصيل";
+
+"CouponCopied"                  = "تم نسخ القسيمة";
+"Remove_Outofstock"             = "يرجى إزالة المنتجات غير المتوفرة  من السلة";
+// New
+
+"MSG_Add_Review"                = "الرجاء مراجعة المنتج";
+"MSG_Add_Rating"                = "يرجى إضافة تصنيف لتقديم";
+"VILLA_LENGTH"                  = "الرجاء إدخال رقم المنزل";
+"OFFICE_LENGTH"                 = "الرجاء إدخال رقم المكتب";
+
+"chooseTimeSlot"                = "احجز وقتك";
+"today"                         = "اليوم";
+
+
+
+
+
+"writeReviews"                  = "أضف/ اقراء التعليقات";
+"cartEmpty"                     = "السلة خالية";
+"FavouriteListEmpty"            = "خياراتك المفضلة خالية";
+"rateUs"                        = "التقييم";
+"home"                          = "المتجر";
+"house"                         = "المنزل";
+
+"more"                          = "المزيد";
+"addMoney"                      = "اضف مبلغ";
+"balance"                       = "الرصيد";
+"amount"                        = "المبلغ";
+"havePromocode"                 = "لديك رمز الترويجي ؟";
+
+
+//Even New
+"callUs"                        = "أتصل";
+"mailUs"                        = "تواصل عن طريق البريد الإلكتروني";
+"chatUs"                        = "المحادثة المباشرة";
+
+"wayNo"                         = "رقم السكة";
+
+"edit"                          = "تحرير";
+"verify"                        = "تحقق";
+"verified"                      = "التحقق";
+"MOBILE_NOT_VERIFIED"           = "الرجاء التحقق من رقم الهاتف لإرسال التغيير";
+"Order_Edit_MSG"                = "بمجرد من ان تقوم بتحرير الطلب، سيكون الطلب تحت قيد الانتظار حتى تقوم بتثبيت الطلب النهائي.";
+
+"houseNo"                       = "رقم المنزل";
+"officeNo"                      = "رقم المكتب";
+"apartment"                     = "الشقة";
+"office"                        = "المكتب";
+
+"trnxId"                        = "رقم المعاملة";
+"addedToWallet"                 = "ر.ع سيضاف الى المحفظة";
+
+"cantFindLocation"              = "لم تجد موقعك ؟";
+"switchToMap"                   = "الانتقال الى الخريطة";
+
+"BookSlot"                      = "أحجز وقت التوصيل";
+"AvailableSlots"                = "منافذ  التوصيل المتوفرة";
+
+"ORDER_DELETE_MSG"              = "هل أنت متأكد من حذف هذا الطلب ؟";
+"Previous_ORDER_DELETE_MSG"     = "هل أنت متأكد من رغبتك في حذف بيانات هذا الطلب";
+"Choose_slot_MSG"               = "الرجاء اختيار وقت توصيل اخر, الوقت الذي اخترته غير متوفر";
+"Mobile_Number_Edit_MSG"        = "تم التحقق من رقمك, لحفظ التغييرات على ملفك اضغط على إرسال";
+
+//Even New
+"NOTIFICATION_DELETE_MSG"       = "هل أنت متأكد أنك تريد حذف هذا الإشعار؟";
+"ALL_NOTIFICATION_DELETE_MSG"   = "هل أنت متأكد أنك تريد حذف كل الإشعارات ؟";
+"loyaltyPoint"                  = "نقاط الولاء";
+"couponCode"                    = "رمز القسيمة";
+"change"                        = "تغيير";
+"Na"                            = "لا يوجد";
+
+"jsonError"                     = "تعذرت قراءة البيانات نظرًا لأن تنسيقها غير صحيح.";
+"failError"                     = "فشل الطلب ، يرجى المحاولة مرة أخرى.";
+"unknownError"                  = "فشل الطلب بسبب خطأ غير معروف ، يرجى المحاولة مرة أخرى";
+
+"Kg"                            = "كلغ";
+"Gm"                            = "غرام";
+"Lt"                            = "لتر";
+"Ml"                            = "مل";
+"Cancelled"                     = "ملغي";
+"Not Cancelled"                 = "غير ملغى";
+"Pending"                       = "قيد الانتظار";
+"Under Packaging"               = "الطلب قيد التنفيذ";
+"Ready To Deliver"              = "مستعد لتوصيل";
+"COD"                           = "الدفع عن الإستلام";
+
+"alreadyPaid"                   = "تم دفع المبلغ مسبقا";
+"deleteDefaultAddressMSG"       = "لا يمكنك الغاء  العنوان الرئيسي";
+"delete_Address_MSG"            = "هل انت متاكد من انك تريد حذف عنوان التسليم؟";
+"Delete_Product_Request_MSG"    = "هل انت متاكد من انك تريد حذف طلب هذا المنتج ؟";
+"Add_Address_MSG"               = "هل انت متاكد من انك تريد اضافة هذا العنوان كعنوان تسليم ؟";
+
+"nearybyLandmark"               = "Nearyby Landmark";
+"similarOldNNewPass"            = "لا يمكن أن تكون كلمة المرور القديمة وكلمة المرور الجديدة متطابقة";
+
+"yes"                           = "نعم";
+"no"                            = "لا";
+
+"ALL_ORDER_DELETE_MSG"          = "هل أنت متأكد من أنك تريد حذف جميع الطلبات السابقة";
+"fromOrder"                     = "من الطلب رقم : #";
+"paidForOrder"                  = "المبلغ  المدفوع  للمشتريات : #";
+"alreadyRated"                  = "لقد قمت من قبل  الاطلاع  على  هذا المنتج";
+
+"addRequest"                    = "إضافات";
+"tryAgain"                      = "حاول مرة اخرى";
+"Loyalty_DELETE_MSG"            = "هل انت متاكد من رغبتك في حذف تاريخ بيانات نقاط الولاء؟";
+"Wallet_DELETE_MSG"             = "هل أنت متأكد من رغبتك بحذف المعاملات السابقة في المحفظة";
+"redeem"                        = "استخدم نقاط الولاء";
+
+"pullToRefresh"                 = "Pull to refresh";
+"MSG_minimum_order"             = "الحد الأدنى للطلب٥٫٠٠٠ ر.ع";
+"delete"                        = "حذف";
+"addAddress"                    = "اضف عنوان التوصيل";
+"addAnotherAddress"             = "اضف عنوان توصيل اخر";
+"thankYou"                      = "شكرا";
+"Online"                        = "بطاقة الائتمانية";
+
+"submitReview"                  = "تقديم المراجعة";
+"writeComment"                  = "اكتب تعليقك..";
+
+"No_Twitter_App_MSG"            = "لم يتم تثبيت تطبيق Twitter على هاتفك.";
+"transactionId"                 = "رقم المعاملة";
+
+"priceLH"                       = "سعر منخفض - عالي";
+"priceHL"                       = "سعر عالي - منخفض";
+"newAdded"                      = "مضاف حديثا";
+"mostPopular"                   = "المنتجات الأكثرطلبا";
+"discounted"                    = "منتجات مخفضة السعر";
+"reviews"                       = "مراجعة";
+"coupon_redeemed"               = "تم الإستبدال";
+"points"                        = "نقاط";
+
+"Delete_Chat_MSG"               = "Do you want to delete this message?";
+"chatSupport"                   = "المحادثة المباشرة";
+"payment"                       = "الدفع";
+"Payment_Failed_MSG"            = "فشلت معاملة الدفع ، يرجى المحاولة مرة أخرى.";
+"enter"                         = "ادخل";
