@@ -43,6 +43,14 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         blockCell.block = blocks[indexPath.row]
         return blockCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailViewController.blocks = blocks
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+        
+        
+    }
 }
 
 

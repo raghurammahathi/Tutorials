@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4AD3E4322AF90EA00541FFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD3E4222AF90EA00541FFB /* DetailViewController.swift */; };
 		B008BBE5221BD2C90063298E /* BlockExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B008BBE4221BD2C90063298E /* BlockExt.swift */; };
 		B008BBE7221BD2EF0063298E /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B008BBE6221BD2EF0063298E /* Block.swift */; };
 		B055F8D721DCE38800FA1414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055F8D621DCE38800FA1414 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		6B5136A5ED8EA1FC160DEDAF /* Pods_HttpClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HttpClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AD3E4222AF90EA00541FFB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B008BBE4221BD2C90063298E /* BlockExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockExt.swift; sourceTree = "<group>"; };
 		B008BBE6221BD2EF0063298E /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		B055F8D321DCE38800FA1414 /* HttpClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 			children = (
 				B055F8D621DCE38800FA1414 /* AppDelegate.swift */,
 				B055F8D821DCE38800FA1414 /* ViewController.swift */,
+				A4AD3E4222AF90EA00541FFB /* DetailViewController.swift */,
 				B055F8DA21DCE38800FA1414 /* Main.storyboard */,
 				B055F8DD21DCE39B00FA1414 /* Assets.xcassets */,
 				B055F8DF21DCE39B00FA1414 /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 				B055F8E921DCE3C000FA1414 /* HTTP.swift in Sources */,
 				B008BBE5221BD2C90063298E /* BlockExt.swift in Sources */,
 				B008BBE7221BD2EF0063298E /* Block.swift in Sources */,
+				A4AD3E4322AF90EA00541FFB /* DetailViewController.swift in Sources */,
 				B055F8D921DCE38800FA1414 /* ViewController.swift in Sources */,
 				B055F8D721DCE38800FA1414 /* AppDelegate.swift in Sources */,
 			);
